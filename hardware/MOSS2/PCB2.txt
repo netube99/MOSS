@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : D:\NETUBE\WORKSPACE\MOSS\hardware\MOSS2\PCB2.PcbDoc
+Date         : 2023/2/9
+Time         : 4:16:09
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 102
+    Connections routed, 102
+    Connections remaining, 0
+count : 4

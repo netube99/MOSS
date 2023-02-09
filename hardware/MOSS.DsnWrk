@@ -1,0 +1,8 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=MOSS1\MOSS1\MOSS1.PrjPcb
+[Project2]
+ProjectPath=MOSS2\MOSS2\MOSS2.PrjPcb
+[Project3]
+ProjectPath=MultiBoard_Project\MultiBoard_Project.PrjMbd

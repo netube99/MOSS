@@ -1,0 +1,31 @@
+{
+    "files.associations": {
+        "lvgl.h": "c",
+        "main.h": "c",
+        "lv_hal.h": "c",
+        "lv_hal_disp.h": "c",
+        "dma.h": "c",
+        "at32f415.h": "c",
+        "lv_port_disp.h": "c",
+        "timer.h": "c",
+        "at32f415_clock.h": "c",
+        "gpio.h": "c",
+        "oled.h": "c",
+        "spi.h": "c",
+        "__node_handle": "c",
+        "key.h": "c",
+        "multi_button.h": "c",
+        "at32f415_int.h": "c",
+        "adc.h": "c",
+        "ui.h": "c",
+        "random": "c",
+        "segger_rtt.h": "c",
+        "array": "c",
+        "iterator": "c",
+        "string": "c",
+        "string_view": "c",
+        "vector": "c",
+        "eeprom.h": "c",
+        "flash.h": "c"
+    }
+}
