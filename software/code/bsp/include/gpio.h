@@ -1,6 +1,8 @@
 #ifndef _GPIO_H_
 #define _GPIO_H_
 
+#include "at32f415.h"
+
 //开关量LED
 //MOSS上白灯
 #define GPIO_LED_STD_1_PIN          GPIO_PINS_1
@@ -39,9 +41,8 @@
 #define _GPIO_LED_DFH_4_L()         gpio_bits_reset(GPIO_LED_DFH_4_PORT, GPIO_LED_DFH_4_PIN)
 
 //外部触发源
-#define GPIO_EXIT_PIN               GPIO_PINS_5
-#define GPIO_EXIT_PORT              GPIOA
-#define GPIO_EXIT_SOURCE            GPIO_PINS_SOURCE5
+#define GPIO_EXIT_SOURCE_PIN        GPIO_PINS_SOURCE5
+#define GPIO_EXIT_SOURCE_PORT       GPIO_PORT_SOURCE_GPIOA
 
 void Gpio_Init(void);
 void Gpio_Exit_Init(void);

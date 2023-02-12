@@ -1,5 +1,4 @@
 #include "gpio.h"
-#include "at32f415.h"
 
 uint8_t Gpio_Exit_Flag[16];
 
@@ -11,7 +10,6 @@ void Gpio_Init(void)
     crm_periph_clock_enable(CRM_GPIOB_PERIPH_CLOCK, TRUE);
 
     //电平状态初始化
-    _GPIO_LED_MOSS_H();
     _GPIO_LED_STD_1_H();
     _GPIO_LED_STD_2_H();
     _GPIO_LED_STD_3_H();
@@ -51,7 +49,7 @@ void Gpio_Exit_Init(void)
     exint_init_type exint_init_struct;
     crm_periph_clock_enable(CRM_IOMUX_PERIPH_CLOCK, TRUE);
     crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);
-    gpio_exint_line_config(GPIO_EXIT_PORT, GPIO_EXIT_SOURCE);
+    gpio_exint_line_config(GPIO_EXIT_SOURCE_PORT, GPIO_EXIT_SOURCE_PIN);
 
     exint_default_para_init(&exint_init_struct);
     exint_init_struct.line_enable = TRUE;
