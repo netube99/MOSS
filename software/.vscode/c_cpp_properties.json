@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "arm",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Keil_v5/ARM/ARMCLANG/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "__CC_ARM",
+                "AT32F415KBU7_4",
+                "USE_STDPERIPH_DRIVER"
+            ],
+            "compilerPath": "C:/Program Files/mingw64/bin/clang.exe",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "windows-clang-x86"
+        }
+    ],
+    "version": 4
+}

@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f415_tmr.h
-  * @version  v2.0.7
-  * @date     2022-08-16
   * @brief    at32f415 tmr header file
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -392,6 +390,15 @@ typedef enum
 }tmr_wp_level_type;
 
 /**
+  * @brief tmr output channel switch selection type
+  */
+typedef enum
+{
+  TMR_CH_SWITCH_SELECT_EXT               = 0x00, /*!< tmr output channel switch select ext pin */
+  TMR_CH_SWITCH_SELECT_CXORAW_OFF        = 0x01, /*!< tmr output channel switch select cxoraw off signal */
+}tmr_ch_switch_select_type ;
+
+/**
   * @brief tmr output config type
   */
 typedef struct
@@ -489,7 +496,7 @@ typedef struct
     struct
     {
       __IO uint32_t smsel                : 3; /* [2:0] */
-      __IO uint32_t reserved1            : 1; /* [3] */
+      __IO uint32_t cossel               : 1; /* [3] */
       __IO uint32_t stis                 : 3; /* [6:4] */
       __IO uint32_t sts                  : 1; /* [7] */
       __IO uint32_t esf                  : 4; /* [11:8] */
@@ -869,6 +876,7 @@ void tmr_output_channel_buffer_enable(tmr_type *tmr_x, tmr_channel_select_type t
                                    confirm_state new_state);
 void tmr_output_channel_immediately_set(tmr_type *tmr_x, tmr_channel_select_type tmr_channel, \
                                         confirm_state new_state);
+void tmr_output_channel_switch_select(tmr_type *tmr_x, tmr_ch_switch_select_type switch_sel);
 void tmr_output_channel_switch_set(tmr_type *tmr_x, tmr_channel_select_type tmr_channel, \
                                    confirm_state new_state);
 void tmr_one_cycle_mode_enable(tmr_type *tmr_x, confirm_state new_state);

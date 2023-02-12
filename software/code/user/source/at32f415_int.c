@@ -134,7 +134,7 @@ void SysTick_Handler(void)
 
 /**
  * @brief 定时器1~10中断服务函数
- * 定时器1周期：5ms
+ * 定时器周期10ms
  */
 void TMR1_OVF_TMR10_IRQHandler(void)
 {
@@ -142,5 +142,15 @@ void TMR1_OVF_TMR10_IRQHandler(void)
     {
         tmr_flag_clear(TMR1, TMR_OVF_FLAG);
         System_Timer_Flag_Set(1);
+    }
+}
+
+void EXINT9_5_IRQHandler(void)
+{
+    //手势识别触发
+    if(exint_flag_get(EXINT_LINE_5) != RESET)
+    {
+        Gpio_Exit_Flag_Set(5, 1);
+        exint_flag_clear(EXINT_LINE_5);
     }
 }

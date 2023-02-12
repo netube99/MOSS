@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f415_usart.h
-  * @version  v2.0.7
-  * @date     2022-08-16
   * @brief    at32f415 usart header file
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -318,9 +316,13 @@ typedef struct
 
 #define USART1                           ((usart_type *) USART1_BASE)
 #define USART2                           ((usart_type *) USART2_BASE)
+#if defined (AT32F415Cx) || defined (AT32F415Rx)
 #define USART3                           ((usart_type *) USART3_BASE)
+#endif
+#if defined (AT32F415Rx)
 #define UART4                            ((usart_type *) UART4_BASE)
 #define UART5                            ((usart_type *) UART5_BASE)
+#endif
 
 /** @defgroup USART_exported_functions
   * @{

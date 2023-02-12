@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f415_tmr.c
-  * @version  v2.0.7
-  * @date     2022-08-16
   * @brief    contains all the functions for the tmr firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -654,6 +652,23 @@ void tmr_output_channel_immediately_set(tmr_type *tmr_x, tmr_channel_select_type
     default:
       break;
   }
+}
+
+/**
+  * @brief  select tmr output channel switch source
+  * @param  tmr_x: select the tmr peripheral.
+  *         this parameter can be one of the following values:
+  *         TMR1, TMR3
+  * @param  switch_sel
+  *         this parameter can be one of the following values:
+  *         - TMR_CH_SWITCH_SELECT_EXT
+  *         - TMR_CH_SWITCH_SELECT_CXORAW_OFF
+  * @retval none
+  */
+void tmr_output_channel_switch_select(tmr_type *tmr_x, tmr_ch_switch_select_type switch_sel)
+{
+  /* select tmr output channel switch source */
+  tmr_x->stctrl_bit.cossel = switch_sel;
 }
 
 /**

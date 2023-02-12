@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f415_can.c
-  * @version  v2.0.7
-  * @date     2022-08-16
   * @brief    contains all the functions for the can firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer

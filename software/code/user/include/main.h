@@ -8,13 +8,14 @@
 //bsp
 #include "gpio.h"
 #include "timer.h"
+#include "i2c_sw.h"
 
 //hardware
+#include "led.h"
 
 //application
 #include "SEGGER_RTT.h"
 
-void System_Loop(void);
 void System_Init(void);
 
 #endif

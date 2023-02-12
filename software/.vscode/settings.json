@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "i2c_sw.h": "c",
+        "main.h": "c",
+        "gpio.h": "c",
+        "led.h": "c",
+        "timer.h": "c",
+        "at32f415.h": "c",
+        "at32f415_clock.h": "c"
+    }
+}

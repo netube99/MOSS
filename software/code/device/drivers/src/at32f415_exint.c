@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f415_exint.c
-  * @version  v2.0.7
-  * @date     2022-08-16
   * @brief    contains all the functions for the exint firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer
