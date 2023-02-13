@@ -2,6 +2,7 @@
 #define _SYSTEM_TIMER_H_
 
 #include <stdint.h>
+#include "at32f415.h"
 
 //MOSS红眼
 #define GPIO_LED_MOSS_PIN           GPIO_PINS_0

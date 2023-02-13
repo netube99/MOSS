@@ -30,7 +30,6 @@ void Gpio_Init(void)
     gpio_init(GPIO_LED_STD_2_PORT, &gpio_init_struct);
     gpio_init_struct.gpio_pins = GPIO_LED_STD_3_PIN;
     gpio_init(GPIO_LED_STD_3_PORT, &gpio_init_struct);
-
     gpio_init_struct.gpio_pins = GPIO_LED_DFH_1_PIN;
     gpio_init(GPIO_LED_DFH_1_PORT, &gpio_init_struct);
     gpio_init_struct.gpio_pins = GPIO_LED_DFH_2_PIN;

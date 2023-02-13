@@ -1,5 +1,4 @@
 #include "timer.h"
-#include "at32f415.h"
 
 uint8_t system_timer_flag = 0;
 
@@ -41,7 +40,7 @@ void Pwm_Timer_Init(void)
 
     //TIMER 3
     crm_periph_clock_enable(CRM_TMR1_PERIPH_CLOCK, TRUE);
-    tmr_base_init(PWM_LED_MOSS_TIMER, 1000-1, 144-1);
+    tmr_base_init(PWM_LED_MOSS_TIMER, 100-1, 144-1);
     tmr_cnt_dir_set(PWM_LED_MOSS_TIMER, TMR_COUNT_UP);
     tmr_output_config_type tmr_output_struct;
     tmr_output_default_para_init(&tmr_output_struct);
