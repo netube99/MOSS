@@ -12,10 +12,12 @@
 
 //hardware
 #include "led.h"
+#include "PAJ7620U2.h"
 
 //application
 #include "SEGGER_RTT.h"
 
 void System_Init(void);
+void gesture(void);
 
 #endif

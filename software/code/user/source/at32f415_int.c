@@ -150,7 +150,7 @@ void EXINT9_5_IRQHandler(void)
     //手势识别触发
     if(exint_flag_get(EXINT_LINE_5) != RESET)
     {
-        Gpio_Exit_Flag_Set(5, 1);
         exint_flag_clear(EXINT_LINE_5);
+        Gpio_Exit_Flag_Set(5, 1);
     }
 }

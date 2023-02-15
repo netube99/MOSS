@@ -509,14 +509,24 @@
               <FilePath>..\code\user\source\at32f415_clock.c</FilePath>
             </File>
             <File>
+              <FileName>at32f415_int.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\user\source\at32f415_int.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\user\source\led.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\code\user\source\main.c</FilePath>
             </File>
             <File>
-              <FileName>at32f415_int.c</FileName>
+              <FileName>PAJ7620U2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\code\user\source\at32f415_int.c</FilePath>
+              <FilePath>..\code\user\source\PAJ7620U2.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -2,9 +2,6 @@
 #define __I2C_SW_H
 
 /* includes */
-#include "main.h"
-#include "stdio.h"
-#include "stdint.h"
 #include "at32f415.h"
 
 #define SW_I2C1_SCL_GPIO  GPIOA

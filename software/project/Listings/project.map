@@ -678,16 +678,6 @@ Section Cross References
     at32f415_clock.o(.text.system_clock_config) refers to at32f415_crm.o(.text.crm_sysclk_switch_status_get) for crm_sysclk_switch_status_get
     at32f415_clock.o(.text.system_clock_config) refers to system_at32f415.o(.text.system_core_clock_update) for system_core_clock_update
     at32f415_clock.o(.ARM.exidx.text.system_clock_config) refers to at32f415_clock.o(.text.system_clock_config) for [Anonymous Symbol]
-    main.o(.text.main) refers to main.o(.text.System_Init) for System_Init
-    main.o(.text.main) refers to timer.o(.text.System_Timer_Flag_Get) for System_Timer_Flag_Get
-    main.o(.text.main) refers to timer.o(.text.System_Timer_Flag_Set) for System_Timer_Flag_Set
-    main.o(.text.main) refers to gpio.o(.text.Gpio_Exit_Flag_Get) for Gpio_Exit_Flag_Get
-    main.o(.text.main) refers to gpio.o(.text.Gpio_Exit_Flag_Set) for Gpio_Exit_Flag_Set
-    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
-    main.o(.text.System_Init) refers to at32f415_clock.o(.text.system_clock_config) for system_clock_config
-    main.o(.text.System_Init) refers to at32f415_misc.o(.text.nvic_priority_group_config) for nvic_priority_group_config
-    main.o(.text.System_Init) refers to i2c_sw.o(.text.SW_I2C_initial) for SW_I2C_initial
-    main.o(.ARM.exidx.text.System_Init) refers to main.o(.text.System_Init) for [Anonymous Symbol]
     at32f415_int.o(.ARM.exidx.text.NMI_Handler) refers to at32f415_int.o(.text.NMI_Handler) for [Anonymous Symbol]
     at32f415_int.o(.ARM.exidx.text.HardFault_Handler) refers to at32f415_int.o(.text.HardFault_Handler) for [Anonymous Symbol]
     at32f415_int.o(.ARM.exidx.text.MemManage_Handler) refers to at32f415_int.o(.text.MemManage_Handler) for [Anonymous Symbol]
@@ -702,10 +692,56 @@ Section Cross References
     at32f415_int.o(.text.TMR1_OVF_TMR10_IRQHandler) refers to timer.o(.text.System_Timer_Flag_Set) for System_Timer_Flag_Set
     at32f415_int.o(.ARM.exidx.text.TMR1_OVF_TMR10_IRQHandler) refers to at32f415_int.o(.text.TMR1_OVF_TMR10_IRQHandler) for [Anonymous Symbol]
     at32f415_int.o(.text.EXINT9_5_IRQHandler) refers to at32f415_exint.o(.text.exint_flag_get) for exint_flag_get
-    at32f415_int.o(.text.EXINT9_5_IRQHandler) refers to gpio.o(.text.Gpio_Exit_Flag_Set) for Gpio_Exit_Flag_Set
     at32f415_int.o(.text.EXINT9_5_IRQHandler) refers to at32f415_exint.o(.text.exint_flag_clear) for exint_flag_clear
+    at32f415_int.o(.text.EXINT9_5_IRQHandler) refers to gpio.o(.text.Gpio_Exit_Flag_Set) for Gpio_Exit_Flag_Set
     at32f415_int.o(.ARM.exidx.text.EXINT9_5_IRQHandler) refers to at32f415_int.o(.text.EXINT9_5_IRQHandler) for [Anonymous Symbol]
+    led.o(.text.Led_Fsm) refers to led.o(.bss.Led_Fsm.ms100) for Led_Fsm.ms100
+    led.o(.text.Led_Fsm) refers to led.o(.bss.Led_Fsm.ms300) for Led_Fsm.ms300
+    led.o(.text.Led_Fsm) refers to led.o(.bss.flash_time) for flash_time
+    led.o(.text.Led_Fsm) refers to at32f415_gpio.o(.text.gpio_bits_set) for gpio_bits_set
+    led.o(.text.Led_Fsm) refers to at32f415_gpio.o(.text.gpio_bits_reset) for gpio_bits_reset
+    led.o(.text.Led_Fsm) refers to led.o(.text.Led_Dfh_Play_Step) for Led_Dfh_Play_Step
+    led.o(.ARM.exidx.text.Led_Fsm) refers to led.o(.text.Led_Fsm) for [Anonymous Symbol]
+    led.o(.text.Led_Dfh_Play_Step) refers to led.o(.bss.Led_Dfh_Play_Step.step) for Led_Dfh_Play_Step.step
+    led.o(.text.Led_Dfh_Play_Step) refers to led.o(.data.dfh_music) for dfh_music
+    led.o(.text.Led_Dfh_Play_Step) refers to led.o(.text.Led_Dfh_Set) for Led_Dfh_Set
+    led.o(.ARM.exidx.text.Led_Dfh_Play_Step) refers to led.o(.text.Led_Dfh_Play_Step) for [Anonymous Symbol]
+    led.o(.text.Led_Dfh_Set) refers to at32f415_gpio.o(.text.gpio_bits_reset) for gpio_bits_reset
+    led.o(.text.Led_Dfh_Set) refers to at32f415_gpio.o(.text.gpio_bits_set) for gpio_bits_set
+    led.o(.ARM.exidx.text.Led_Dfh_Set) refers to led.o(.text.Led_Dfh_Set) for [Anonymous Symbol]
+    led.o(.text.Led_Moss_Set) refers to led.o(.data.Led_Moss_Set.moss_light) for Led_Moss_Set.moss_light
+    led.o(.text.Led_Moss_Set) refers to at32f415_tmr.o(.text.tmr_channel_value_set) for tmr_channel_value_set
+    led.o(.ARM.exidx.text.Led_Moss_Set) refers to led.o(.text.Led_Moss_Set) for [Anonymous Symbol]
+    led.o(.text.Led_Flash) refers to led.o(.bss.flash_time) for flash_time
+    led.o(.ARM.exidx.text.Led_Flash) refers to led.o(.text.Led_Flash) for [Anonymous Symbol]
+    main.o(.text.main) refers to main.o(.text.System_Init) for System_Init
+    main.o(.text.main) refers to timer.o(.text.System_Timer_Flag_Get) for System_Timer_Flag_Get
+    main.o(.text.main) refers to timer.o(.text.System_Timer_Flag_Set) for System_Timer_Flag_Set
+    main.o(.text.main) refers to main.o(.text.gesture) for gesture
+    main.o(.text.main) refers to led.o(.text.Led_Fsm) for Led_Fsm
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    main.o(.text.System_Init) refers to at32f415_clock.o(.text.system_clock_config) for system_clock_config
+    main.o(.text.System_Init) refers to at32f415_misc.o(.text.nvic_priority_group_config) for nvic_priority_group_config
+    main.o(.text.System_Init) refers to gpio.o(.text.Gpio_Init) for Gpio_Init
+    main.o(.text.System_Init) refers to timer.o(.text.System_Timer_Init) for System_Timer_Init
+    main.o(.text.System_Init) refers to timer.o(.text.Pwm_Timer_Init) for Pwm_Timer_Init
+    main.o(.text.System_Init) refers to at32f415_tmr.o(.text.tmr_channel_value_set) for tmr_channel_value_set
+    main.o(.text.System_Init) refers to gpio.o(.text.Gpio_Exit_Init) for Gpio_Exit_Init
+    main.o(.text.System_Init) refers to i2c_sw.o(.text.SW_I2C_initial) for SW_I2C_initial
+    main.o(.text.System_Init) refers to paj7620u2.o(.text.Paj7620u2_Init) for Paj7620u2_Init
+    main.o(.text.System_Init) refers to at32f415_gpio.o(.text.gpio_bits_reset) for gpio_bits_reset
+    main.o(.ARM.exidx.text.System_Init) refers to main.o(.text.System_Init) for [Anonymous Symbol]
+    main.o(.text.gesture) refers to paj7620u2.o(.text.Paj7620u2_Get) for Paj7620u2_Get
+    main.o(.text.gesture) refers to led.o(.text.Led_Flash) for Led_Flash
+    main.o(.ARM.exidx.text.gesture) refers to main.o(.text.gesture) for [Anonymous Symbol]
+    paj7620u2.o(.text.Paj7620u2_Init) refers to i2c_sw.o(.text.SW_I2C_WriteControl_8Bit) for SW_I2C_WriteControl_8Bit
+    paj7620u2.o(.text.Paj7620u2_Init) refers to paj7620u2.o(.rodata.Init_Register_Array) for Init_Register_Array
+    paj7620u2.o(.text.Paj7620u2_Init) refers to paj7620u2.o(.rodata.Init_Gesture_Array) for Init_Gesture_Array
+    paj7620u2.o(.ARM.exidx.text.Paj7620u2_Init) refers to paj7620u2.o(.text.Paj7620u2_Init) for [Anonymous Symbol]
+    paj7620u2.o(.text.Paj7620u2_Get) refers to i2c_sw.o(.text.SW_I2C_ReadControl_8Bit) for SW_I2C_ReadControl_8Bit
+    paj7620u2.o(.ARM.exidx.text.Paj7620u2_Get) refers to paj7620u2.o(.text.Paj7620u2_Get) for [Anonymous Symbol]
     gpio.o(.text.Gpio_Init) refers to at32f415_crm.o(.text.crm_periph_clock_enable) for crm_periph_clock_enable
+    gpio.o(.text.Gpio_Init) refers to at32f415_gpio.o(.text.gpio_pin_remap_config) for gpio_pin_remap_config
     gpio.o(.text.Gpio_Init) refers to at32f415_gpio.o(.text.gpio_bits_set) for gpio_bits_set
     gpio.o(.text.Gpio_Init) refers to at32f415_gpio.o(.text.gpio_default_para_init) for gpio_default_para_init
     gpio.o(.text.Gpio_Init) refers to at32f415_gpio.o(.text.gpio_init) for gpio_init
@@ -1543,9 +1579,7 @@ Removing Unused input sections from the image.
     Removing at32f415_exint.o(.text), (0 bytes).
     Removing at32f415_exint.o(.text.exint_reset), (62 bytes).
     Removing at32f415_exint.o(.ARM.exidx.text.exint_reset), (8 bytes).
-    Removing at32f415_exint.o(.text.exint_default_para_init), (28 bytes).
     Removing at32f415_exint.o(.ARM.exidx.text.exint_default_para_init), (8 bytes).
-    Removing at32f415_exint.o(.text.exint_init), (228 bytes).
     Removing at32f415_exint.o(.ARM.exidx.text.exint_init), (8 bytes).
     Removing at32f415_exint.o(.ARM.exidx.text.exint_flag_clear), (8 bytes).
     Removing at32f415_exint.o(.ARM.exidx.text.exint_flag_get), (8 bytes).
@@ -1630,7 +1664,6 @@ Removing Unused input sections from the image.
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_iomux_reset), (8 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_init), (8 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_default_para_init), (8 bytes).
-    Removing at32f415_gpio.o(.text.gpio_input_data_bit_read), (54 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_input_data_bit_read), (8 bytes).
     Removing at32f415_gpio.o(.text.gpio_input_data_read), (14 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_input_data_read), (8 bytes).
@@ -1638,9 +1671,7 @@ Removing Unused input sections from the image.
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_output_data_bit_read), (8 bytes).
     Removing at32f415_gpio.o(.text.gpio_output_data_read), (14 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_output_data_read), (8 bytes).
-    Removing at32f415_gpio.o(.text.gpio_bits_set), (20 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_bits_set), (8 bytes).
-    Removing at32f415_gpio.o(.text.gpio_bits_reset), (20 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_bits_reset), (8 bytes).
     Removing at32f415_gpio.o(.text.gpio_bits_write), (44 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_bits_write), (8 bytes).
@@ -1652,9 +1683,7 @@ Removing Unused input sections from the image.
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_event_output_config), (8 bytes).
     Removing at32f415_gpio.o(.text.gpio_event_output_enable), (36 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_event_output_enable), (8 bytes).
-    Removing at32f415_gpio.o(.text.gpio_pin_remap_config), (150 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_pin_remap_config), (8 bytes).
-    Removing at32f415_gpio.o(.text.gpio_exint_line_config), (220 bytes).
     Removing at32f415_gpio.o(.ARM.exidx.text.gpio_exint_line_config), (8 bytes).
     Removing at32f415_i2c.o(.text), (0 bytes).
     Removing at32f415_i2c.o(.text.i2c_reset), (92 bytes).
@@ -1722,15 +1751,10 @@ Removing Unused input sections from the image.
     Removing at32f415_misc.o(.ARM.exidx.text.nvic_system_reset), (8 bytes).
     Removing at32f415_misc.o(.text.__NVIC_SystemReset), (38 bytes).
     Removing at32f415_misc.o(.ARM.exidx.text.__NVIC_SystemReset), (8 bytes).
-    Removing at32f415_misc.o(.text.nvic_irq_enable), (52 bytes).
     Removing at32f415_misc.o(.ARM.exidx.text.nvic_irq_enable), (8 bytes).
-    Removing at32f415_misc.o(.text.NVIC_EncodePriority), (108 bytes).
     Removing at32f415_misc.o(.ARM.exidx.text.NVIC_EncodePriority), (8 bytes).
-    Removing at32f415_misc.o(.text.__NVIC_GetPriorityGrouping), (16 bytes).
     Removing at32f415_misc.o(.ARM.exidx.text.__NVIC_GetPriorityGrouping), (8 bytes).
-    Removing at32f415_misc.o(.text.__NVIC_SetPriority), (66 bytes).
     Removing at32f415_misc.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
-    Removing at32f415_misc.o(.text.__NVIC_EnableIRQ), (48 bytes).
     Removing at32f415_misc.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
     Removing at32f415_misc.o(.text.nvic_irq_disable), (20 bytes).
     Removing at32f415_misc.o(.ARM.exidx.text.nvic_irq_disable), (8 bytes).
@@ -1874,19 +1898,15 @@ Removing Unused input sections from the image.
     Removing at32f415_tmr.o(.text), (0 bytes).
     Removing at32f415_tmr.o(.text.tmr_reset), (336 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_reset), (8 bytes).
-    Removing at32f415_tmr.o(.text.tmr_counter_enable), (26 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_counter_enable), (8 bytes).
-    Removing at32f415_tmr.o(.text.tmr_output_default_para_init), (38 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_output_default_para_init), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_input_default_para_init), (28 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_input_default_para_init), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_brkdt_default_para_init), (38 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_brkdt_default_para_init), (8 bytes).
-    Removing at32f415_tmr.o(.text.tmr_base_init), (34 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_base_init), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_clock_source_div_set), (34 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_clock_source_div_set), (8 bytes).
-    Removing at32f415_tmr.o(.text.tmr_cnt_dir_set), (34 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_cnt_dir_set), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_repetition_counter_set), (28 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_repetition_counter_set), (8 bytes).
@@ -1898,7 +1918,6 @@ Removing Unused input sections from the image.
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_div_value_set), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_div_value_get), (12 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_div_value_get), (8 bytes).
-    Removing at32f415_tmr.o(.text.tmr_output_channel_config), (492 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_output_channel_config), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_output_channel_mode_select), (148 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_output_channel_mode_select), (8 bytes).
@@ -1906,7 +1925,6 @@ Removing Unused input sections from the image.
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_period_value_set), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_period_value_get), (12 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_period_value_get), (8 bytes).
-    Removing at32f415_tmr.o(.text.tmr_channel_value_set), (82 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_channel_value_set), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_channel_value_get), (86 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_channel_value_get), (8 bytes).
@@ -1956,13 +1974,11 @@ Removing Unused input sections from the image.
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_sub_sync_mode_set), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_dma_request_enable), (64 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_dma_request_enable), (8 bytes).
-    Removing at32f415_tmr.o(.text.tmr_interrupt_enable), (58 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_interrupt_enable), (8 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_flag_get), (8 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_flag_clear), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_event_sw_trigger), (24 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_event_sw_trigger), (8 bytes).
-    Removing at32f415_tmr.o(.text.tmr_output_enable), (34 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_output_enable), (8 bytes).
     Removing at32f415_tmr.o(.text.tmr_internal_clock_set), (18 bytes).
     Removing at32f415_tmr.o(.ARM.exidx.text.tmr_internal_clock_set), (8 bytes).
@@ -2160,10 +2176,6 @@ Removing Unused input sections from the image.
     Removing at32f415_wwdt.o(.ARM.exidx.text.wwdt_window_counter_set), (8 bytes).
     Removing at32f415_clock.o(.text), (0 bytes).
     Removing at32f415_clock.o(.ARM.exidx.text.system_clock_config), (8 bytes).
-    Removing main.o(.text), (0 bytes).
-    Removing main.o(.ARM.exidx.text.main), (8 bytes).
-    Removing main.o(.ARM.exidx.text.System_Init), (8 bytes).
-    Removing main.o(.ARM.use_no_argv), (4 bytes).
     Removing at32f415_int.o(.text), (0 bytes).
     Removing at32f415_int.o(.ARM.exidx.text.NMI_Handler), (8 bytes).
     Removing at32f415_int.o(.ARM.exidx.text.HardFault_Handler), (8 bytes).
@@ -2176,77 +2188,68 @@ Removing Unused input sections from the image.
     Removing at32f415_int.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
     Removing at32f415_int.o(.ARM.exidx.text.TMR1_OVF_TMR10_IRQHandler), (8 bytes).
     Removing at32f415_int.o(.ARM.exidx.text.EXINT9_5_IRQHandler), (8 bytes).
+    Removing led.o(.text), (0 bytes).
+    Removing led.o(.ARM.exidx.text.Led_Fsm), (8 bytes).
+    Removing led.o(.ARM.exidx.text.Led_Dfh_Play_Step), (8 bytes).
+    Removing led.o(.ARM.exidx.text.Led_Dfh_Set), (8 bytes).
+    Removing led.o(.text.Led_Moss_Set), (128 bytes).
+    Removing led.o(.ARM.exidx.text.Led_Moss_Set), (8 bytes).
+    Removing led.o(.ARM.exidx.text.Led_Flash), (8 bytes).
+    Removing led.o(.data.Led_Moss_Set.moss_light), (1 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.exidx.text.System_Init), (8 bytes).
+    Removing main.o(.ARM.exidx.text.gesture), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing paj7620u2.o(.text), (0 bytes).
+    Removing paj7620u2.o(.ARM.exidx.text.Paj7620u2_Init), (8 bytes).
+    Removing paj7620u2.o(.ARM.exidx.text.Paj7620u2_Get), (8 bytes).
+    Removing paj7620u2.o(.rodata.Init_PS_Array), (70 bytes).
     Removing gpio.o(.text), (0 bytes).
-    Removing gpio.o(.text.Gpio_Init), (236 bytes).
     Removing gpio.o(.ARM.exidx.text.Gpio_Init), (8 bytes).
-    Removing gpio.o(.text.Gpio_Exit_Init), (134 bytes).
     Removing gpio.o(.ARM.exidx.text.Gpio_Exit_Init), (8 bytes).
+    Removing gpio.o(.text.Gpio_Exit_Flag_Get), (24 bytes).
     Removing gpio.o(.ARM.exidx.text.Gpio_Exit_Flag_Get), (8 bytes).
     Removing gpio.o(.ARM.exidx.text.Gpio_Exit_Flag_Set), (8 bytes).
     Removing timer.o(.text), (0 bytes).
-    Removing timer.o(.text.System_Timer_Init), (80 bytes).
     Removing timer.o(.ARM.exidx.text.System_Timer_Init), (8 bytes).
     Removing timer.o(.ARM.exidx.text.System_Timer_Flag_Set), (8 bytes).
     Removing timer.o(.ARM.exidx.text.System_Timer_Flag_Get), (8 bytes).
-    Removing timer.o(.text.Pwm_Timer_Init), (194 bytes).
     Removing timer.o(.ARM.exidx.text.Pwm_Timer_Init), (8 bytes).
     Removing i2c_sw.o(.text), (0 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_initial), (8 bytes).
-    Removing i2c_sw.o(.text.GPIO_SetBits), (24 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.GPIO_SetBits), (8 bytes).
-    Removing i2c_sw.o(.text.GPIO_ResetBits), (24 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.GPIO_ResetBits), (8 bytes).
-    Removing i2c_sw.o(.text.GPIO_ReadInputDataBit), (24 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.GPIO_ReadInputDataBit), (8 bytes).
-    Removing i2c_sw.o(.text.sda_in_mode), (54 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.sda_in_mode), (8 bytes).
-    Removing i2c_sw.o(.text.sda_out_mode), (70 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.sda_out_mode), (8 bytes).
     Removing i2c_sw.o(.text.scl_in_mode), (54 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.scl_in_mode), (8 bytes).
     Removing i2c_sw.o(.text.scl_out_mode), (70 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.scl_out_mode), (8 bytes).
-    Removing i2c_sw.o(.text.TIMER__Wait_us), (26 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.TIMER__Wait_us), (8 bytes).
-    Removing i2c_sw.o(.text.sda_high), (38 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.sda_high), (8 bytes).
-    Removing i2c_sw.o(.text.sda_low), (38 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.sda_low), (8 bytes).
-    Removing i2c_sw.o(.text.scl_high), (38 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.scl_high), (8 bytes).
-    Removing i2c_sw.o(.text.scl_low), (38 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.scl_low), (8 bytes).
-    Removing i2c_sw.o(.text.sda_out), (44 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.sda_out), (8 bytes).
-    Removing i2c_sw.o(.text.i2c_clk_data_out), (34 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_clk_data_out), (8 bytes).
-    Removing i2c_sw.o(.text.i2c_port_initial), (28 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_port_initial), (8 bytes).
-    Removing i2c_sw.o(.text.i2c_start_condition), (64 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_start_condition), (8 bytes).
-    Removing i2c_sw.o(.text.i2c_stop_condition), (50 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_stop_condition), (8 bytes).
-    Removing i2c_sw.o(.text.i2c_check_ack), (120 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_check_ack), (8 bytes).
-    Removing i2c_sw.o(.text.SW_I2C_ReadVal_SDA), (54 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_ReadVal_SDA), (8 bytes).
-    Removing i2c_sw.o(.text.i2c_check_not_ack), (42 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_check_not_ack), (8 bytes).
     Removing i2c_sw.o(.text.i2c_check_not_ack_continue), (26 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_check_not_ack_continue), (8 bytes).
-    Removing i2c_sw.o(.text.i2c_slave_address), (122 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_slave_address), (8 bytes).
-    Removing i2c_sw.o(.text.i2c_register_address), (82 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_register_address), (8 bytes).
     Removing i2c_sw.o(.text.i2c_send_ack), (88 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.i2c_send_ack), (8 bytes).
     Removing i2c_sw.o(.text.SW_I2C_ReadVal_SCL), (54 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_ReadVal_SCL), (8 bytes).
-    Removing i2c_sw.o(.text.SW_I2C_Write_Data), (82 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_Write_Data), (8 bytes).
-    Removing i2c_sw.o(.text.SW_I2C_Read_Data), (122 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_Read_Data), (8 bytes).
-    Removing i2c_sw.o(.text.SW_I2C_WriteControl_8Bit), (166 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_WriteControl_8Bit), (8 bytes).
     Removing i2c_sw.o(.text.SW_I2C_WriteControl_8Bit_OnlyRegAddr), (104 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_WriteControl_8Bit_OnlyRegAddr), (8 bytes).
@@ -2258,7 +2261,6 @@ Removing Unused input sections from the image.
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_ReadControl_8Bit_OnlyData), (8 bytes).
     Removing i2c_sw.o(.text.SW_I2C_ReadControl_16Bit_OnlyData), (138 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_ReadControl_16Bit_OnlyData), (8 bytes).
-    Removing i2c_sw.o(.text.SW_I2C_ReadControl_8Bit), (162 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_ReadControl_8Bit), (8 bytes).
     Removing i2c_sw.o(.text.SW_I2C_ReadControl_16Bit), (200 bytes).
     Removing i2c_sw.o(.ARM.exidx.text.SW_I2C_ReadControl_16Bit), (8 bytes).
@@ -2367,7 +2369,7 @@ Removing Unused input sections from the image.
     Removing segger_rtt_printf.o(.ARM.exidx.text.SEGGER_RTT_printf), (8 bytes).
     Removing segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C), (16 bytes).
 
-1178 unused section(s) (total 52427 bytes) removed from the image.
+1144 unused section(s) (total 48716 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2440,6 +2442,7 @@ Image Symbol Table
     ../code/device/cmsis/src/startup_at32f415.s 0x00000000   Number         0  startup_at32f415.o ABSOLUTE
     ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
     ../fplib/fpinit_empty.s                  0x00000000   Number         0  fpinit_empty.o ABSOLUTE
+    PAJ7620U2.c                              0x00000000   Number         0  paj7620u2.o ABSOLUTE
     SEGGER_RTT.c                             0x00000000   Number         0  segger_rtt.o ABSOLUTE
     SEGGER_RTT_printf.c                      0x00000000   Number         0  segger_rtt_printf.o ABSOLUTE
     at32f415_adc.c                           0x00000000   Number         0  at32f415_adc.o ABSOLUTE
@@ -2468,6 +2471,7 @@ Image Symbol Table
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     gpio.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
     i2c_sw.c                                 0x00000000   Number         0  i2c_sw.o ABSOLUTE
+    led.c                                    0x00000000   Number         0  led.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     system_at32f415.c                        0x00000000   Number         0  system_at32f415.o ABSOLUTE
     timer.c                                  0x00000000   Number         0  timer.o ABSOLUTE
@@ -2529,52 +2533,116 @@ Image Symbol Table
     [Anonymous Symbol]                       0x080003b8   Section        0  at32f415_int.o(.text.BusFault_Handler)
     [Anonymous Symbol]                       0x080003bc   Section        0  at32f415_int.o(.text.DebugMon_Handler)
     [Anonymous Symbol]                       0x080003c0   Section        0  at32f415_int.o(.text.EXINT9_5_IRQHandler)
-    [Anonymous Symbol]                       0x080003e0   Section        0  gpio.o(.text.Gpio_Exit_Flag_Get)
-    [Anonymous Symbol]                       0x080003f8   Section        0  gpio.o(.text.Gpio_Exit_Flag_Set)
-    [Anonymous Symbol]                       0x08000418   Section        0  at32f415_int.o(.text.HardFault_Handler)
-    [Anonymous Symbol]                       0x0800041c   Section        0  at32f415_int.o(.text.MemManage_Handler)
-    [Anonymous Symbol]                       0x08000420   Section        0  at32f415_int.o(.text.NMI_Handler)
-    [Anonymous Symbol]                       0x08000424   Section        0  at32f415_int.o(.text.PendSV_Handler)
-    [Anonymous Symbol]                       0x08000428   Section        0  at32f415_int.o(.text.SVC_Handler)
-    [Anonymous Symbol]                       0x0800042c   Section        0  i2c_sw.o(.text.SW_I2C_initial)
-    [Anonymous Symbol]                       0x08000484   Section        0  at32f415_int.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x08000488   Section        0  system_at32f415.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08000558   Section        0  main.o(.text.System_Init)
-    [Anonymous Symbol]                       0x0800056c   Section        0  timer.o(.text.System_Timer_Flag_Get)
-    [Anonymous Symbol]                       0x08000578   Section        0  timer.o(.text.System_Timer_Flag_Set)
-    [Anonymous Symbol]                       0x08000590   Section        0  at32f415_int.o(.text.TMR1_OVF_TMR10_IRQHandler)
-    [Anonymous Symbol]                       0x080005c4   Section        0  at32f415_int.o(.text.UsageFault_Handler)
-    __NVIC_SetPriorityGrouping               0x080005c9   Thumb Code    60  at32f415_misc.o(.text.__NVIC_SetPriorityGrouping)
-    [Anonymous Symbol]                       0x080005c8   Section        0  at32f415_misc.o(.text.__NVIC_SetPriorityGrouping)
-    [Anonymous Symbol]                       0x08000604   Section        0  at32f415_crm.o(.text.crm_ahb_div_set)
-    [Anonymous Symbol]                       0x0800062c   Section        0  at32f415_crm.o(.text.crm_apb1_div_set)
-    [Anonymous Symbol]                       0x08000654   Section        0  at32f415_crm.o(.text.crm_apb2_div_set)
-    [Anonymous Symbol]                       0x0800067c   Section        0  at32f415_crm.o(.text.crm_auto_step_mode_enable)
-    [Anonymous Symbol]                       0x080006b4   Section        0  at32f415_crm.o(.text.crm_clock_source_enable)
-    [Anonymous Symbol]                       0x0800075c   Section        0  at32f415_crm.o(.text.crm_flag_get)
-    [Anonymous Symbol]                       0x0800079c   Section        0  at32f415_crm.o(.text.crm_periph_clock_enable)
-    [Anonymous Symbol]                       0x080007f0   Section        0  at32f415_crm.o(.text.crm_pll_config)
-    [Anonymous Symbol]                       0x080009d4   Section        0  at32f415_crm.o(.text.crm_reset)
-    [Anonymous Symbol]                       0x08000a70   Section        0  at32f415_crm.o(.text.crm_sysclk_switch)
-    [Anonymous Symbol]                       0x08000a90   Section        0  at32f415_crm.o(.text.crm_sysclk_switch_status_get)
-    [Anonymous Symbol]                       0x08000aa0   Section        0  at32f415_exint.o(.text.exint_flag_clear)
-    [Anonymous Symbol]                       0x08000ab4   Section        0  at32f415_exint.o(.text.exint_flag_get)
-    [Anonymous Symbol]                       0x08000af0   Section        0  at32f415_gpio.o(.text.gpio_default_para_init)
-    [Anonymous Symbol]                       0x08000b18   Section        0  at32f415_gpio.o(.text.gpio_init)
-    [Anonymous Symbol]                       0x08000c58   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x08000c8c   Section        0  at32f415_misc.o(.text.nvic_priority_group_config)
-    [Anonymous Symbol]                       0x08000ca0   Section        0  at32f415_clock.o(.text.system_clock_config)
-    [Anonymous Symbol]                       0x08000d2c   Section        0  system_at32f415.o(.text.system_core_clock_update)
-    [Anonymous Symbol]                       0x08000f60   Section        0  at32f415_tmr.o(.text.tmr_flag_clear)
-    [Anonymous Symbol]                       0x08000f74   Section        0  at32f415_tmr.o(.text.tmr_flag_get)
-    system_core_clock_update.sys_ahb_div_table 0x08000fa4   Data          16  system_at32f415.o(.rodata.system_core_clock_update.sys_ahb_div_table)
-    [Anonymous Symbol]                       0x08000fa4   Section        0  system_at32f415.o(.rodata.system_core_clock_update.sys_ahb_div_table)
-    .bss                                     0x20000008   Section       96  libspace.o(.bss)
-    Heap_Mem                                 0x20000080   Data         512  startup_at32f415.o(HEAP)
-    HEAP                                     0x20000080   Section      512  startup_at32f415.o(HEAP)
-    Stack_Mem                                0x20000280   Data        1024  startup_at32f415.o(STACK)
-    STACK                                    0x20000280   Section     1024  startup_at32f415.o(STACK)
-    __initial_sp                             0x20000680   Data           0  startup_at32f415.o(STACK)
+    [Anonymous Symbol]                       0x080003e0   Section        0  i2c_sw.o(.text.GPIO_ReadInputDataBit)
+    [Anonymous Symbol]                       0x080003f8   Section        0  i2c_sw.o(.text.GPIO_ResetBits)
+    [Anonymous Symbol]                       0x08000410   Section        0  i2c_sw.o(.text.GPIO_SetBits)
+    [Anonymous Symbol]                       0x08000428   Section        0  gpio.o(.text.Gpio_Exit_Flag_Set)
+    [Anonymous Symbol]                       0x08000448   Section        0  gpio.o(.text.Gpio_Exit_Init)
+    [Anonymous Symbol]                       0x080004d0   Section        0  gpio.o(.text.Gpio_Init)
+    [Anonymous Symbol]                       0x080005d4   Section        0  at32f415_int.o(.text.HardFault_Handler)
+    [Anonymous Symbol]                       0x080005d8   Section        0  led.o(.text.Led_Dfh_Play_Step)
+    [Anonymous Symbol]                       0x08000618   Section        0  led.o(.text.Led_Dfh_Set)
+    [Anonymous Symbol]                       0x080006d0   Section        0  led.o(.text.Led_Flash)
+    [Anonymous Symbol]                       0x080006e0   Section        0  led.o(.text.Led_Fsm)
+    [Anonymous Symbol]                       0x08000784   Section        0  at32f415_int.o(.text.MemManage_Handler)
+    [Anonymous Symbol]                       0x08000788   Section        0  at32f415_int.o(.text.NMI_Handler)
+    NVIC_EncodePriority                      0x0800078d   Thumb Code   108  at32f415_misc.o(.text.NVIC_EncodePriority)
+    [Anonymous Symbol]                       0x0800078c   Section        0  at32f415_misc.o(.text.NVIC_EncodePriority)
+    [Anonymous Symbol]                       0x080007f8   Section        0  paj7620u2.o(.text.Paj7620u2_Get)
+    [Anonymous Symbol]                       0x08000858   Section        0  paj7620u2.o(.text.Paj7620u2_Init)
+    [Anonymous Symbol]                       0x080008f8   Section        0  at32f415_int.o(.text.PendSV_Handler)
+    [Anonymous Symbol]                       0x080008fc   Section        0  timer.o(.text.Pwm_Timer_Init)
+    [Anonymous Symbol]                       0x080009c0   Section        0  at32f415_int.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x080009c4   Section        0  i2c_sw.o(.text.SW_I2C_ReadControl_8Bit)
+    [Anonymous Symbol]                       0x08000a68   Section        0  i2c_sw.o(.text.SW_I2C_ReadVal_SDA)
+    [Anonymous Symbol]                       0x08000aa0   Section        0  i2c_sw.o(.text.SW_I2C_Read_Data)
+    [Anonymous Symbol]                       0x08000b1c   Section        0  i2c_sw.o(.text.SW_I2C_WriteControl_8Bit)
+    [Anonymous Symbol]                       0x08000bc4   Section        0  i2c_sw.o(.text.SW_I2C_Write_Data)
+    [Anonymous Symbol]                       0x08000c18   Section        0  i2c_sw.o(.text.SW_I2C_initial)
+    [Anonymous Symbol]                       0x08000c70   Section        0  at32f415_int.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x08000c74   Section        0  system_at32f415.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08000d44   Section        0  main.o(.text.System_Init)
+    [Anonymous Symbol]                       0x08000d98   Section        0  timer.o(.text.System_Timer_Flag_Get)
+    [Anonymous Symbol]                       0x08000da4   Section        0  timer.o(.text.System_Timer_Flag_Set)
+    [Anonymous Symbol]                       0x08000dbc   Section        0  timer.o(.text.System_Timer_Init)
+    [Anonymous Symbol]                       0x08000e0c   Section        0  i2c_sw.o(.text.TIMER__Wait_us)
+    [Anonymous Symbol]                       0x08000e28   Section        0  at32f415_int.o(.text.TMR1_OVF_TMR10_IRQHandler)
+    [Anonymous Symbol]                       0x08000e5c   Section        0  at32f415_int.o(.text.UsageFault_Handler)
+    __NVIC_EnableIRQ                         0x08000e61   Thumb Code    48  at32f415_misc.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08000e60   Section        0  at32f415_misc.o(.text.__NVIC_EnableIRQ)
+    __NVIC_GetPriorityGrouping               0x08000e91   Thumb Code    16  at32f415_misc.o(.text.__NVIC_GetPriorityGrouping)
+    [Anonymous Symbol]                       0x08000e90   Section        0  at32f415_misc.o(.text.__NVIC_GetPriorityGrouping)
+    __NVIC_SetPriority                       0x08000ea1   Thumb Code    66  at32f415_misc.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08000ea0   Section        0  at32f415_misc.o(.text.__NVIC_SetPriority)
+    __NVIC_SetPriorityGrouping               0x08000ee5   Thumb Code    60  at32f415_misc.o(.text.__NVIC_SetPriorityGrouping)
+    [Anonymous Symbol]                       0x08000ee4   Section        0  at32f415_misc.o(.text.__NVIC_SetPriorityGrouping)
+    [Anonymous Symbol]                       0x08000f20   Section        0  at32f415_crm.o(.text.crm_ahb_div_set)
+    [Anonymous Symbol]                       0x08000f48   Section        0  at32f415_crm.o(.text.crm_apb1_div_set)
+    [Anonymous Symbol]                       0x08000f70   Section        0  at32f415_crm.o(.text.crm_apb2_div_set)
+    [Anonymous Symbol]                       0x08000f98   Section        0  at32f415_crm.o(.text.crm_auto_step_mode_enable)
+    [Anonymous Symbol]                       0x08000fd0   Section        0  at32f415_crm.o(.text.crm_clock_source_enable)
+    [Anonymous Symbol]                       0x08001078   Section        0  at32f415_crm.o(.text.crm_flag_get)
+    [Anonymous Symbol]                       0x080010b8   Section        0  at32f415_crm.o(.text.crm_periph_clock_enable)
+    [Anonymous Symbol]                       0x0800110c   Section        0  at32f415_crm.o(.text.crm_pll_config)
+    [Anonymous Symbol]                       0x080012f0   Section        0  at32f415_crm.o(.text.crm_reset)
+    [Anonymous Symbol]                       0x0800138c   Section        0  at32f415_crm.o(.text.crm_sysclk_switch)
+    [Anonymous Symbol]                       0x080013ac   Section        0  at32f415_crm.o(.text.crm_sysclk_switch_status_get)
+    [Anonymous Symbol]                       0x080013bc   Section        0  at32f415_exint.o(.text.exint_default_para_init)
+    [Anonymous Symbol]                       0x080013d8   Section        0  at32f415_exint.o(.text.exint_flag_clear)
+    [Anonymous Symbol]                       0x080013ec   Section        0  at32f415_exint.o(.text.exint_flag_get)
+    [Anonymous Symbol]                       0x08001428   Section        0  at32f415_exint.o(.text.exint_init)
+    [Anonymous Symbol]                       0x0800150c   Section        0  main.o(.text.gesture)
+    [Anonymous Symbol]                       0x08001550   Section        0  at32f415_gpio.o(.text.gpio_bits_reset)
+    [Anonymous Symbol]                       0x08001564   Section        0  at32f415_gpio.o(.text.gpio_bits_set)
+    [Anonymous Symbol]                       0x08001578   Section        0  at32f415_gpio.o(.text.gpio_default_para_init)
+    [Anonymous Symbol]                       0x080015a0   Section        0  at32f415_gpio.o(.text.gpio_exint_line_config)
+    [Anonymous Symbol]                       0x0800167c   Section        0  at32f415_gpio.o(.text.gpio_init)
+    [Anonymous Symbol]                       0x080017bc   Section        0  at32f415_gpio.o(.text.gpio_input_data_bit_read)
+    [Anonymous Symbol]                       0x080017f4   Section        0  at32f415_gpio.o(.text.gpio_pin_remap_config)
+    [Anonymous Symbol]                       0x0800188c   Section        0  i2c_sw.o(.text.i2c_check_ack)
+    [Anonymous Symbol]                       0x08001904   Section        0  i2c_sw.o(.text.i2c_check_not_ack)
+    [Anonymous Symbol]                       0x08001930   Section        0  i2c_sw.o(.text.i2c_clk_data_out)
+    [Anonymous Symbol]                       0x08001954   Section        0  i2c_sw.o(.text.i2c_port_initial)
+    [Anonymous Symbol]                       0x08001970   Section        0  i2c_sw.o(.text.i2c_register_address)
+    [Anonymous Symbol]                       0x080019c4   Section        0  i2c_sw.o(.text.i2c_slave_address)
+    [Anonymous Symbol]                       0x08001a40   Section        0  i2c_sw.o(.text.i2c_start_condition)
+    [Anonymous Symbol]                       0x08001a80   Section        0  i2c_sw.o(.text.i2c_stop_condition)
+    [Anonymous Symbol]                       0x08001ab4   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x08001ae0   Section        0  at32f415_misc.o(.text.nvic_irq_enable)
+    [Anonymous Symbol]                       0x08001b14   Section        0  at32f415_misc.o(.text.nvic_priority_group_config)
+    [Anonymous Symbol]                       0x08001b28   Section        0  i2c_sw.o(.text.scl_high)
+    [Anonymous Symbol]                       0x08001b50   Section        0  i2c_sw.o(.text.scl_low)
+    [Anonymous Symbol]                       0x08001b78   Section        0  i2c_sw.o(.text.sda_high)
+    [Anonymous Symbol]                       0x08001ba0   Section        0  i2c_sw.o(.text.sda_in_mode)
+    [Anonymous Symbol]                       0x08001bd8   Section        0  i2c_sw.o(.text.sda_low)
+    [Anonymous Symbol]                       0x08001c00   Section        0  i2c_sw.o(.text.sda_out)
+    [Anonymous Symbol]                       0x08001c2c   Section        0  i2c_sw.o(.text.sda_out_mode)
+    [Anonymous Symbol]                       0x08001c74   Section        0  at32f415_clock.o(.text.system_clock_config)
+    [Anonymous Symbol]                       0x08001d00   Section        0  system_at32f415.o(.text.system_core_clock_update)
+    [Anonymous Symbol]                       0x08001f34   Section        0  at32f415_tmr.o(.text.tmr_base_init)
+    [Anonymous Symbol]                       0x08001f58   Section        0  at32f415_tmr.o(.text.tmr_channel_value_set)
+    [Anonymous Symbol]                       0x08001fac   Section        0  at32f415_tmr.o(.text.tmr_cnt_dir_set)
+    [Anonymous Symbol]                       0x08001fd0   Section        0  at32f415_tmr.o(.text.tmr_counter_enable)
+    [Anonymous Symbol]                       0x08001fec   Section        0  at32f415_tmr.o(.text.tmr_flag_clear)
+    [Anonymous Symbol]                       0x08002000   Section        0  at32f415_tmr.o(.text.tmr_flag_get)
+    [Anonymous Symbol]                       0x08002030   Section        0  at32f415_tmr.o(.text.tmr_interrupt_enable)
+    [Anonymous Symbol]                       0x0800206c   Section        0  at32f415_tmr.o(.text.tmr_output_channel_config)
+    [Anonymous Symbol]                       0x08002258   Section        0  at32f415_tmr.o(.text.tmr_output_default_para_init)
+    [Anonymous Symbol]                       0x08002280   Section        0  at32f415_tmr.o(.text.tmr_output_enable)
+    system_core_clock_update.sys_ahb_div_table 0x08002344   Data          16  system_at32f415.o(.rodata.system_core_clock_update.sys_ahb_div_table)
+    [Anonymous Symbol]                       0x08002344   Section        0  system_at32f415.o(.rodata.system_core_clock_update.sys_ahb_div_table)
+    .bss                                     0x20000028   Section       96  libspace.o(.bss)
+    Led_Dfh_Play_Step.step                   0x20000098   Data           1  led.o(.bss.Led_Dfh_Play_Step.step)
+    [Anonymous Symbol]                       0x20000098   Section        0  led.o(.bss.Led_Dfh_Play_Step.step)
+    Led_Fsm.ms100                            0x2000009a   Data           2  led.o(.bss.Led_Fsm.ms100)
+    [Anonymous Symbol]                       0x2000009a   Section        0  led.o(.bss.Led_Fsm.ms100)
+    Led_Fsm.ms300                            0x2000009c   Data           2  led.o(.bss.Led_Fsm.ms300)
+    [Anonymous Symbol]                       0x2000009c   Section        0  led.o(.bss.Led_Fsm.ms300)
+    Heap_Mem                                 0x200000a0   Data         512  startup_at32f415.o(HEAP)
+    HEAP                                     0x200000a0   Section      512  startup_at32f415.o(HEAP)
+    Stack_Mem                                0x200002a0   Data        1024  startup_at32f415.o(STACK)
+    STACK                                    0x200002a0   Section     1024  startup_at32f415.o(STACK)
+    __initial_sp                             0x200006a0   Data           0  startup_at32f415.o(STACK)
 
     Global Symbols
 
@@ -2733,49 +2801,103 @@ Image Symbol Table
     BusFault_Handler                         0x080003b9   Thumb Code     4  at32f415_int.o(.text.BusFault_Handler)
     DebugMon_Handler                         0x080003bd   Thumb Code     2  at32f415_int.o(.text.DebugMon_Handler)
     EXINT9_5_IRQHandler                      0x080003c1   Thumb Code    30  at32f415_int.o(.text.EXINT9_5_IRQHandler)
-    Gpio_Exit_Flag_Get                       0x080003e1   Thumb Code    24  gpio.o(.text.Gpio_Exit_Flag_Get)
-    Gpio_Exit_Flag_Set                       0x080003f9   Thumb Code    32  gpio.o(.text.Gpio_Exit_Flag_Set)
-    HardFault_Handler                        0x08000419   Thumb Code     4  at32f415_int.o(.text.HardFault_Handler)
-    MemManage_Handler                        0x0800041d   Thumb Code     4  at32f415_int.o(.text.MemManage_Handler)
-    NMI_Handler                              0x08000421   Thumb Code     2  at32f415_int.o(.text.NMI_Handler)
-    PendSV_Handler                           0x08000425   Thumb Code     2  at32f415_int.o(.text.PendSV_Handler)
-    SVC_Handler                              0x08000429   Thumb Code     2  at32f415_int.o(.text.SVC_Handler)
-    SW_I2C_initial                           0x0800042d   Thumb Code    86  i2c_sw.o(.text.SW_I2C_initial)
-    SysTick_Handler                          0x08000485   Thumb Code     2  at32f415_int.o(.text.SysTick_Handler)
-    SystemInit                               0x08000489   Thumb Code   208  system_at32f415.o(.text.SystemInit)
-    System_Init                              0x08000559   Thumb Code    18  main.o(.text.System_Init)
-    System_Timer_Flag_Get                    0x0800056d   Thumb Code    12  timer.o(.text.System_Timer_Flag_Get)
-    System_Timer_Flag_Set                    0x08000579   Thumb Code    24  timer.o(.text.System_Timer_Flag_Set)
-    TMR1_OVF_TMR10_IRQHandler                0x08000591   Thumb Code    50  at32f415_int.o(.text.TMR1_OVF_TMR10_IRQHandler)
-    UsageFault_Handler                       0x080005c5   Thumb Code     4  at32f415_int.o(.text.UsageFault_Handler)
-    crm_ahb_div_set                          0x08000605   Thumb Code    38  at32f415_crm.o(.text.crm_ahb_div_set)
-    crm_apb1_div_set                         0x0800062d   Thumb Code    38  at32f415_crm.o(.text.crm_apb1_div_set)
-    crm_apb2_div_set                         0x08000655   Thumb Code    38  at32f415_crm.o(.text.crm_apb2_div_set)
-    crm_auto_step_mode_enable                0x0800067d   Thumb Code    56  at32f415_crm.o(.text.crm_auto_step_mode_enable)
-    crm_clock_source_enable                  0x080006b5   Thumb Code   166  at32f415_crm.o(.text.crm_clock_source_enable)
-    crm_flag_get                             0x0800075d   Thumb Code    62  at32f415_crm.o(.text.crm_flag_get)
-    crm_periph_clock_enable                  0x0800079d   Thumb Code    82  at32f415_crm.o(.text.crm_periph_clock_enable)
-    crm_pll_config                           0x080007f1   Thumb Code   484  at32f415_crm.o(.text.crm_pll_config)
-    crm_reset                                0x080009d5   Thumb Code   154  at32f415_crm.o(.text.crm_reset)
-    crm_sysclk_switch                        0x08000a71   Thumb Code    30  at32f415_crm.o(.text.crm_sysclk_switch)
-    crm_sysclk_switch_status_get             0x08000a91   Thumb Code    16  at32f415_crm.o(.text.crm_sysclk_switch_status_get)
-    exint_flag_clear                         0x08000aa1   Thumb Code    20  at32f415_exint.o(.text.exint_flag_clear)
-    exint_flag_get                           0x08000ab5   Thumb Code    58  at32f415_exint.o(.text.exint_flag_get)
-    gpio_default_para_init                   0x08000af1   Thumb Code    38  at32f415_gpio.o(.text.gpio_default_para_init)
-    gpio_init                                0x08000b19   Thumb Code   320  at32f415_gpio.o(.text.gpio_init)
-    main                                     0x08000c59   Thumb Code    52  main.o(.text.main)
-    nvic_priority_group_config               0x08000c8d   Thumb Code    20  at32f415_misc.o(.text.nvic_priority_group_config)
-    system_clock_config                      0x08000ca1   Thumb Code   138  at32f415_clock.o(.text.system_clock_config)
-    system_core_clock_update                 0x08000d2d   Thumb Code   562  system_at32f415.o(.text.system_core_clock_update)
-    tmr_flag_clear                           0x08000f61   Thumb Code    18  at32f415_tmr.o(.text.tmr_flag_clear)
-    tmr_flag_get                             0x08000f75   Thumb Code    48  at32f415_tmr.o(.text.tmr_flag_get)
-    Region$$Table$$Base                      0x08000fb4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000fd4   Number         0  anon$$obj.o(Region$$Table)
-    system_core_clock                        0x20000000   Data           4  system_at32f415.o(.data.system_core_clock)
-    __libspace_start                         0x20000008   Data          96  libspace.o(.bss)
-    Gpio_Exit_Flag                           0x20000068   Data          16  gpio.o(.bss.Gpio_Exit_Flag)
-    __temporary_stack_top$libspace           0x20000068   Data           0  libspace.o(.bss)
-    system_timer_flag                        0x20000078   Data           1  timer.o(.bss.system_timer_flag)
+    GPIO_ReadInputDataBit                    0x080003e1   Thumb Code    24  i2c_sw.o(.text.GPIO_ReadInputDataBit)
+    GPIO_ResetBits                           0x080003f9   Thumb Code    24  i2c_sw.o(.text.GPIO_ResetBits)
+    GPIO_SetBits                             0x08000411   Thumb Code    24  i2c_sw.o(.text.GPIO_SetBits)
+    Gpio_Exit_Flag_Set                       0x08000429   Thumb Code    32  gpio.o(.text.Gpio_Exit_Flag_Set)
+    Gpio_Exit_Init                           0x08000449   Thumb Code   134  gpio.o(.text.Gpio_Exit_Init)
+    Gpio_Init                                0x080004d1   Thumb Code   260  gpio.o(.text.Gpio_Init)
+    HardFault_Handler                        0x080005d5   Thumb Code     4  at32f415_int.o(.text.HardFault_Handler)
+    Led_Dfh_Play_Step                        0x080005d9   Thumb Code    64  led.o(.text.Led_Dfh_Play_Step)
+    Led_Dfh_Set                              0x08000619   Thumb Code   184  led.o(.text.Led_Dfh_Set)
+    Led_Flash                                0x080006d1   Thumb Code    16  led.o(.text.Led_Flash)
+    Led_Fsm                                  0x080006e1   Thumb Code   164  led.o(.text.Led_Fsm)
+    MemManage_Handler                        0x08000785   Thumb Code     4  at32f415_int.o(.text.MemManage_Handler)
+    NMI_Handler                              0x08000789   Thumb Code     2  at32f415_int.o(.text.NMI_Handler)
+    Paj7620u2_Get                            0x080007f9   Thumb Code    96  paj7620u2.o(.text.Paj7620u2_Get)
+    Paj7620u2_Init                           0x08000859   Thumb Code   160  paj7620u2.o(.text.Paj7620u2_Init)
+    PendSV_Handler                           0x080008f9   Thumb Code     2  at32f415_int.o(.text.PendSV_Handler)
+    Pwm_Timer_Init                           0x080008fd   Thumb Code   196  timer.o(.text.Pwm_Timer_Init)
+    SVC_Handler                              0x080009c1   Thumb Code     2  at32f415_int.o(.text.SVC_Handler)
+    SW_I2C_ReadControl_8Bit                  0x080009c5   Thumb Code   162  i2c_sw.o(.text.SW_I2C_ReadControl_8Bit)
+    SW_I2C_ReadVal_SDA                       0x08000a69   Thumb Code    54  i2c_sw.o(.text.SW_I2C_ReadVal_SDA)
+    SW_I2C_Read_Data                         0x08000aa1   Thumb Code   122  i2c_sw.o(.text.SW_I2C_Read_Data)
+    SW_I2C_WriteControl_8Bit                 0x08000b1d   Thumb Code   166  i2c_sw.o(.text.SW_I2C_WriteControl_8Bit)
+    SW_I2C_Write_Data                        0x08000bc5   Thumb Code    82  i2c_sw.o(.text.SW_I2C_Write_Data)
+    SW_I2C_initial                           0x08000c19   Thumb Code    86  i2c_sw.o(.text.SW_I2C_initial)
+    SysTick_Handler                          0x08000c71   Thumb Code     2  at32f415_int.o(.text.SysTick_Handler)
+    SystemInit                               0x08000c75   Thumb Code   208  system_at32f415.o(.text.SystemInit)
+    System_Init                              0x08000d45   Thumb Code    82  main.o(.text.System_Init)
+    System_Timer_Flag_Get                    0x08000d99   Thumb Code    12  timer.o(.text.System_Timer_Flag_Get)
+    System_Timer_Flag_Set                    0x08000da5   Thumb Code    24  timer.o(.text.System_Timer_Flag_Set)
+    System_Timer_Init                        0x08000dbd   Thumb Code    80  timer.o(.text.System_Timer_Init)
+    TIMER__Wait_us                           0x08000e0d   Thumb Code    26  i2c_sw.o(.text.TIMER__Wait_us)
+    TMR1_OVF_TMR10_IRQHandler                0x08000e29   Thumb Code    50  at32f415_int.o(.text.TMR1_OVF_TMR10_IRQHandler)
+    UsageFault_Handler                       0x08000e5d   Thumb Code     4  at32f415_int.o(.text.UsageFault_Handler)
+    crm_ahb_div_set                          0x08000f21   Thumb Code    38  at32f415_crm.o(.text.crm_ahb_div_set)
+    crm_apb1_div_set                         0x08000f49   Thumb Code    38  at32f415_crm.o(.text.crm_apb1_div_set)
+    crm_apb2_div_set                         0x08000f71   Thumb Code    38  at32f415_crm.o(.text.crm_apb2_div_set)
+    crm_auto_step_mode_enable                0x08000f99   Thumb Code    56  at32f415_crm.o(.text.crm_auto_step_mode_enable)
+    crm_clock_source_enable                  0x08000fd1   Thumb Code   166  at32f415_crm.o(.text.crm_clock_source_enable)
+    crm_flag_get                             0x08001079   Thumb Code    62  at32f415_crm.o(.text.crm_flag_get)
+    crm_periph_clock_enable                  0x080010b9   Thumb Code    82  at32f415_crm.o(.text.crm_periph_clock_enable)
+    crm_pll_config                           0x0800110d   Thumb Code   484  at32f415_crm.o(.text.crm_pll_config)
+    crm_reset                                0x080012f1   Thumb Code   154  at32f415_crm.o(.text.crm_reset)
+    crm_sysclk_switch                        0x0800138d   Thumb Code    30  at32f415_crm.o(.text.crm_sysclk_switch)
+    crm_sysclk_switch_status_get             0x080013ad   Thumb Code    16  at32f415_crm.o(.text.crm_sysclk_switch_status_get)
+    exint_default_para_init                  0x080013bd   Thumb Code    28  at32f415_exint.o(.text.exint_default_para_init)
+    exint_flag_clear                         0x080013d9   Thumb Code    20  at32f415_exint.o(.text.exint_flag_clear)
+    exint_flag_get                           0x080013ed   Thumb Code    58  at32f415_exint.o(.text.exint_flag_get)
+    exint_init                               0x08001429   Thumb Code   228  at32f415_exint.o(.text.exint_init)
+    gesture                                  0x0800150d   Thumb Code    66  main.o(.text.gesture)
+    gpio_bits_reset                          0x08001551   Thumb Code    20  at32f415_gpio.o(.text.gpio_bits_reset)
+    gpio_bits_set                            0x08001565   Thumb Code    20  at32f415_gpio.o(.text.gpio_bits_set)
+    gpio_default_para_init                   0x08001579   Thumb Code    38  at32f415_gpio.o(.text.gpio_default_para_init)
+    gpio_exint_line_config                   0x080015a1   Thumb Code   220  at32f415_gpio.o(.text.gpio_exint_line_config)
+    gpio_init                                0x0800167d   Thumb Code   320  at32f415_gpio.o(.text.gpio_init)
+    gpio_input_data_bit_read                 0x080017bd   Thumb Code    54  at32f415_gpio.o(.text.gpio_input_data_bit_read)
+    gpio_pin_remap_config                    0x080017f5   Thumb Code   150  at32f415_gpio.o(.text.gpio_pin_remap_config)
+    i2c_check_ack                            0x0800188d   Thumb Code   120  i2c_sw.o(.text.i2c_check_ack)
+    i2c_check_not_ack                        0x08001905   Thumb Code    42  i2c_sw.o(.text.i2c_check_not_ack)
+    i2c_clk_data_out                         0x08001931   Thumb Code    34  i2c_sw.o(.text.i2c_clk_data_out)
+    i2c_port_initial                         0x08001955   Thumb Code    28  i2c_sw.o(.text.i2c_port_initial)
+    i2c_register_address                     0x08001971   Thumb Code    82  i2c_sw.o(.text.i2c_register_address)
+    i2c_slave_address                        0x080019c5   Thumb Code   122  i2c_sw.o(.text.i2c_slave_address)
+    i2c_start_condition                      0x08001a41   Thumb Code    64  i2c_sw.o(.text.i2c_start_condition)
+    i2c_stop_condition                       0x08001a81   Thumb Code    50  i2c_sw.o(.text.i2c_stop_condition)
+    main                                     0x08001ab5   Thumb Code    42  main.o(.text.main)
+    nvic_irq_enable                          0x08001ae1   Thumb Code    52  at32f415_misc.o(.text.nvic_irq_enable)
+    nvic_priority_group_config               0x08001b15   Thumb Code    20  at32f415_misc.o(.text.nvic_priority_group_config)
+    scl_high                                 0x08001b29   Thumb Code    38  i2c_sw.o(.text.scl_high)
+    scl_low                                  0x08001b51   Thumb Code    38  i2c_sw.o(.text.scl_low)
+    sda_high                                 0x08001b79   Thumb Code    38  i2c_sw.o(.text.sda_high)
+    sda_in_mode                              0x08001ba1   Thumb Code    54  i2c_sw.o(.text.sda_in_mode)
+    sda_low                                  0x08001bd9   Thumb Code    38  i2c_sw.o(.text.sda_low)
+    sda_out                                  0x08001c01   Thumb Code    44  i2c_sw.o(.text.sda_out)
+    sda_out_mode                             0x08001c2d   Thumb Code    70  i2c_sw.o(.text.sda_out_mode)
+    system_clock_config                      0x08001c75   Thumb Code   138  at32f415_clock.o(.text.system_clock_config)
+    system_core_clock_update                 0x08001d01   Thumb Code   562  system_at32f415.o(.text.system_core_clock_update)
+    tmr_base_init                            0x08001f35   Thumb Code    34  at32f415_tmr.o(.text.tmr_base_init)
+    tmr_channel_value_set                    0x08001f59   Thumb Code    82  at32f415_tmr.o(.text.tmr_channel_value_set)
+    tmr_cnt_dir_set                          0x08001fad   Thumb Code    34  at32f415_tmr.o(.text.tmr_cnt_dir_set)
+    tmr_counter_enable                       0x08001fd1   Thumb Code    26  at32f415_tmr.o(.text.tmr_counter_enable)
+    tmr_flag_clear                           0x08001fed   Thumb Code    18  at32f415_tmr.o(.text.tmr_flag_clear)
+    tmr_flag_get                             0x08002001   Thumb Code    48  at32f415_tmr.o(.text.tmr_flag_get)
+    tmr_interrupt_enable                     0x08002031   Thumb Code    58  at32f415_tmr.o(.text.tmr_interrupt_enable)
+    tmr_output_channel_config                0x0800206d   Thumb Code   492  at32f415_tmr.o(.text.tmr_output_channel_config)
+    tmr_output_default_para_init             0x08002259   Thumb Code    38  at32f415_tmr.o(.text.tmr_output_default_para_init)
+    tmr_output_enable                        0x08002281   Thumb Code    34  at32f415_tmr.o(.text.tmr_output_enable)
+    Init_Gesture_Array                       0x080022a2   Data          60  paj7620u2.o(.rodata.Init_Gesture_Array)
+    Init_Register_Array                      0x080022de   Data         102  paj7620u2.o(.rodata.Init_Register_Array)
+    Region$$Table$$Base                      0x08002354   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002374   Number         0  anon$$obj.o(Region$$Table)
+    dfh_music                                0x20000000   Data          32  led.o(.data.dfh_music)
+    system_core_clock                        0x20000020   Data           4  system_at32f415.o(.data.system_core_clock)
+    __libspace_start                         0x20000028   Data          96  libspace.o(.bss)
+    Gpio_Exit_Flag                           0x20000088   Data          16  gpio.o(.bss.Gpio_Exit_Flag)
+    __temporary_stack_top$libspace           0x20000088   Data           0  libspace.o(.bss)
+    flash_time                               0x2000009e   Data           1  led.o(.bss.flash_time)
+    system_timer_flag                        0x2000009f   Data           1  timer.o(.bss.system_timer_flag)
 
 
 
@@ -2785,149 +2907,239 @@ Memory Map of the image
 
   Image Entry point : 0x08000171
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000fe0, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000023a0, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000fd4, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002374, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000170   Data   RO            3    RESET               startup_at32f415.o
-    0x08000170   0x08000170   0x00000008   Code   RO         1423  * !!!main             c_w.l(__main.o)
-    0x08000178   0x08000178   0x00000034   Code   RO         1598    !!!scatter          c_w.l(__scatter.o)
-    0x080001ac   0x080001ac   0x0000001a   Code   RO         1600    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000170   0x08000170   0x00000008   Code   RO         1462  * !!!main             c_w.l(__main.o)
+    0x08000178   0x08000178   0x00000034   Code   RO         1637    !!!scatter          c_w.l(__scatter.o)
+    0x080001ac   0x080001ac   0x0000001a   Code   RO         1639    !!handler_copy      c_w.l(__scatter_copy.o)
     0x080001c6   0x080001c6   0x00000002   PAD
-    0x080001c8   0x080001c8   0x0000001c   Code   RO         1602    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x080001e4   0x080001e4   0x00000002   Code   RO         1462    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1475    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1477    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1480    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1482    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1484    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1487    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1489    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1491    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1493    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1495    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1497    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1499    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1501    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1503    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1505    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1507    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1511    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1513    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1515    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000000   Code   RO         1517    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x080001e6   0x080001e6   0x00000002   Code   RO         1518    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x080001e8   0x080001e8   0x00000002   Code   RO         1553    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x080001ea   0x080001ea   0x00000000   Code   RO         1581    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x080001ea   0x080001ea   0x00000000   Code   RO         1583    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x080001ea   0x080001ea   0x00000000   Code   RO         1586    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x080001ea   0x080001ea   0x00000000   Code   RO         1589    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x080001ea   0x080001ea   0x00000000   Code   RO         1591    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x080001ea   0x080001ea   0x00000000   Code   RO         1594    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x080001ea   0x080001ea   0x00000002   Code   RO         1595    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x080001ec   0x080001ec   0x00000000   Code   RO         1425    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x080001ec   0x080001ec   0x00000000   Code   RO         1433    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x080001ec   0x080001ec   0x00000006   Code   RO         1445    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x080001f2   0x080001f2   0x00000000   Code   RO         1435    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x080001f2   0x080001f2   0x00000004   Code   RO         1436    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1438    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x080001f6   0x080001f6   0x00000008   Code   RO         1439    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x080001fe   0x080001fe   0x00000002   Code   RO         1466    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x08000200   0x08000200   0x00000000   Code   RO         1524    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x08000200   0x08000200   0x00000004   Code   RO         1525    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x08000204   0x08000204   0x00000006   Code   RO         1526    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x080001c8   0x080001c8   0x0000001c   Code   RO         1641    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x080001e4   0x080001e4   0x00000002   Code   RO         1501    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1514    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1516    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1519    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1521    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1523    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1526    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1528    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1530    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1532    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1534    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1536    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1538    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1540    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1542    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1544    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1546    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1550    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1552    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1554    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000000   Code   RO         1556    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x080001e6   0x080001e6   0x00000002   Code   RO         1557    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x080001e8   0x080001e8   0x00000002   Code   RO         1592    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x080001ea   0x080001ea   0x00000000   Code   RO         1620    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x080001ea   0x080001ea   0x00000000   Code   RO         1622    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x080001ea   0x080001ea   0x00000000   Code   RO         1625    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x080001ea   0x080001ea   0x00000000   Code   RO         1628    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x080001ea   0x080001ea   0x00000000   Code   RO         1630    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x080001ea   0x080001ea   0x00000000   Code   RO         1633    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x080001ea   0x080001ea   0x00000002   Code   RO         1634    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x080001ec   0x080001ec   0x00000000   Code   RO         1464    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x080001ec   0x080001ec   0x00000000   Code   RO         1472    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x080001ec   0x080001ec   0x00000006   Code   RO         1484    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x080001f2   0x080001f2   0x00000000   Code   RO         1474    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x080001f2   0x080001f2   0x00000004   Code   RO         1475    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1477    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x080001f6   0x080001f6   0x00000008   Code   RO         1478    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x080001fe   0x080001fe   0x00000002   Code   RO         1505    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000200   0x08000200   0x00000000   Code   RO         1563    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000200   0x08000200   0x00000004   Code   RO         1564    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000204   0x08000204   0x00000006   Code   RO         1565    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0800020a   0x0800020a   0x00000002   PAD
     0x0800020c   0x0800020c   0x00000040   Code   RO            4    .text               startup_at32f415.o
-    0x0800024c   0x0800024c   0x000000f0   Code   RO         1413    .text               c_w.l(lludivv7m.o)
-    0x0800033c   0x0800033c   0x00000006   Code   RO         1421    .text               c_w.l(heapauxi.o)
-    0x08000342   0x08000342   0x0000004a   Code   RO         1449    .text               c_w.l(sys_stackheap_outer.o)
-    0x0800038c   0x0800038c   0x00000012   Code   RO         1451    .text               c_w.l(exit.o)
+    0x0800024c   0x0800024c   0x000000f0   Code   RO         1452    .text               c_w.l(lludivv7m.o)
+    0x0800033c   0x0800033c   0x00000006   Code   RO         1460    .text               c_w.l(heapauxi.o)
+    0x08000342   0x08000342   0x0000004a   Code   RO         1488    .text               c_w.l(sys_stackheap_outer.o)
+    0x0800038c   0x0800038c   0x00000012   Code   RO         1490    .text               c_w.l(exit.o)
     0x0800039e   0x0800039e   0x00000002   PAD
-    0x080003a0   0x080003a0   0x00000008   Code   RO         1463    .text               c_w.l(libspace.o)
-    0x080003a8   0x080003a8   0x0000000c   Code   RO         1519    .text               c_w.l(sys_exit.o)
-    0x080003b4   0x080003b4   0x00000002   Code   RO         1542    .text               c_w.l(use_no_semi.o)
-    0x080003b6   0x080003b6   0x00000000   Code   RO         1544    .text               c_w.l(indicate_semi.o)
+    0x080003a0   0x080003a0   0x00000008   Code   RO         1502    .text               c_w.l(libspace.o)
+    0x080003a8   0x080003a8   0x0000000c   Code   RO         1558    .text               c_w.l(sys_exit.o)
+    0x080003b4   0x080003b4   0x00000002   Code   RO         1581    .text               c_w.l(use_no_semi.o)
+    0x080003b6   0x080003b6   0x00000000   Code   RO         1583    .text               c_w.l(indicate_semi.o)
     0x080003b6   0x080003b6   0x00000002   PAD
-    0x080003b8   0x080003b8   0x00000004   Code   RO         1162    .text.BusFault_Handler  at32f415_int.o
-    0x080003bc   0x080003bc   0x00000002   Code   RO         1168    .text.DebugMon_Handler  at32f415_int.o
+    0x080003b8   0x080003b8   0x00000004   Code   RO         1150    .text.BusFault_Handler  at32f415_int.o
+    0x080003bc   0x080003bc   0x00000002   Code   RO         1156    .text.DebugMon_Handler  at32f415_int.o
     0x080003be   0x080003be   0x00000002   PAD
-    0x080003c0   0x080003c0   0x0000001e   Code   RO         1176    .text.EXINT9_5_IRQHandler  at32f415_int.o
+    0x080003c0   0x080003c0   0x0000001e   Code   RO         1164    .text.EXINT9_5_IRQHandler  at32f415_int.o
     0x080003de   0x080003de   0x00000002   PAD
-    0x080003e0   0x080003e0   0x00000018   Code   RO         1189    .text.Gpio_Exit_Flag_Get  gpio.o
-    0x080003f8   0x080003f8   0x00000020   Code   RO         1191    .text.Gpio_Exit_Flag_Set  gpio.o
-    0x08000418   0x08000418   0x00000004   Code   RO         1158    .text.HardFault_Handler  at32f415_int.o
-    0x0800041c   0x0800041c   0x00000004   Code   RO         1160    .text.MemManage_Handler  at32f415_int.o
-    0x08000420   0x08000420   0x00000002   Code   RO         1156    .text.NMI_Handler   at32f415_int.o
-    0x08000422   0x08000422   0x00000002   PAD
-    0x08000424   0x08000424   0x00000002   Code   RO         1170    .text.PendSV_Handler  at32f415_int.o
-    0x08000426   0x08000426   0x00000002   PAD
-    0x08000428   0x08000428   0x00000002   Code   RO         1166    .text.SVC_Handler   at32f415_int.o
-    0x0800042a   0x0800042a   0x00000002   PAD
-    0x0800042c   0x0800042c   0x00000056   Code   RO         1217    .text.SW_I2C_initial  i2c_sw.o
-    0x08000482   0x08000482   0x00000002   PAD
-    0x08000484   0x08000484   0x00000002   Code   RO         1172    .text.SysTick_Handler  at32f415_int.o
-    0x08000486   0x08000486   0x00000002   PAD
-    0x08000488   0x08000488   0x000000d0   Code   RO           11    .text.SystemInit    system_at32f415.o
-    0x08000558   0x08000558   0x00000012   Code   RO         1146    .text.System_Init   main.o
-    0x0800056a   0x0800056a   0x00000002   PAD
-    0x0800056c   0x0800056c   0x0000000c   Code   RO         1205    .text.System_Timer_Flag_Get  timer.o
-    0x08000578   0x08000578   0x00000018   Code   RO         1203    .text.System_Timer_Flag_Set  timer.o
-    0x08000590   0x08000590   0x00000032   Code   RO         1174    .text.TMR1_OVF_TMR10_IRQHandler  at32f415_int.o
-    0x080005c2   0x080005c2   0x00000002   PAD
-    0x080005c4   0x080005c4   0x00000004   Code   RO         1164    .text.UsageFault_Handler  at32f415_int.o
-    0x080005c8   0x080005c8   0x0000003c   Code   RO          657    .text.__NVIC_SetPriorityGrouping  at32f415_misc.o
-    0x08000604   0x08000604   0x00000026   Code   RO          226    .text.crm_ahb_div_set  at32f415_crm.o
-    0x0800062a   0x0800062a   0x00000002   PAD
-    0x0800062c   0x0800062c   0x00000026   Code   RO          228    .text.crm_apb1_div_set  at32f415_crm.o
-    0x08000652   0x08000652   0x00000002   PAD
-    0x08000654   0x08000654   0x00000026   Code   RO          230    .text.crm_apb2_div_set  at32f415_crm.o
-    0x0800067a   0x0800067a   0x00000002   PAD
-    0x0800067c   0x0800067c   0x00000038   Code   RO          254    .text.crm_auto_step_mode_enable  at32f415_crm.o
-    0x080006b4   0x080006b4   0x000000a6   Code   RO          218    .text.crm_clock_source_enable  at32f415_crm.o
-    0x0800075a   0x0800075a   0x00000002   PAD
-    0x0800075c   0x0800075c   0x0000003e   Code   RO          204    .text.crm_flag_get  at32f415_crm.o
-    0x0800079a   0x0800079a   0x00000002   PAD
-    0x0800079c   0x0800079c   0x00000052   Code   RO          212    .text.crm_periph_clock_enable  at32f415_crm.o
-    0x080007ee   0x080007ee   0x00000002   PAD
-    0x080007f0   0x080007f0   0x000001e4   Code   RO          240    .text.crm_pll_config  at32f415_crm.o
-    0x080009d4   0x080009d4   0x0000009a   Code   RO          198    .text.crm_reset     at32f415_crm.o
-    0x08000a6e   0x08000a6e   0x00000002   PAD
-    0x08000a70   0x08000a70   0x0000001e   Code   RO          244    .text.crm_sysclk_switch  at32f415_crm.o
-    0x08000a8e   0x08000a8e   0x00000002   PAD
-    0x08000a90   0x08000a90   0x00000010   Code   RO          246    .text.crm_sysclk_switch_status_get  at32f415_crm.o
-    0x08000aa0   0x08000aa0   0x00000014   Code   RO          438    .text.exint_flag_clear  at32f415_exint.o
-    0x08000ab4   0x08000ab4   0x0000003a   Code   RO          440    .text.exint_flag_get  at32f415_exint.o
-    0x08000aee   0x08000aee   0x00000002   PAD
-    0x08000af0   0x08000af0   0x00000026   Code   RO          535    .text.gpio_default_para_init  at32f415_gpio.o
-    0x08000b16   0x08000b16   0x00000002   PAD
-    0x08000b18   0x08000b18   0x00000140   Code   RO          533    .text.gpio_init     at32f415_gpio.o
-    0x08000c58   0x08000c58   0x00000034   Code   RO         1144    .text.main          main.o
-    0x08000c8c   0x08000c8c   0x00000014   Code   RO          655    .text.nvic_priority_group_config  at32f415_misc.o
-    0x08000ca0   0x08000ca0   0x0000008a   Code   RO         1136    .text.system_clock_config  at32f415_clock.o
-    0x08000d2a   0x08000d2a   0x00000002   PAD
-    0x08000d2c   0x08000d2c   0x00000232   Code   RO           13    .text.system_core_clock_update  system_at32f415.o
-    0x08000f5e   0x08000f5e   0x00000002   PAD
-    0x08000f60   0x08000f60   0x00000012   Code   RO          905    .text.tmr_flag_clear  at32f415_tmr.o
-    0x08000f72   0x08000f72   0x00000002   PAD
-    0x08000f74   0x08000f74   0x00000030   Code   RO          903    .text.tmr_flag_get  at32f415_tmr.o
-    0x08000fa4   0x08000fa4   0x00000010   Data   RO           16    .rodata.system_core_clock_update.sys_ahb_div_table  system_at32f415.o
-    0x08000fb4   0x08000fb4   0x00000020   Data   RO         1597    Region$$Table       anon$$obj.o
+    0x080003e0   0x080003e0   0x00000018   Code   RO         1262    .text.GPIO_ReadInputDataBit  i2c_sw.o
+    0x080003f8   0x080003f8   0x00000018   Code   RO         1260    .text.GPIO_ResetBits  i2c_sw.o
+    0x08000410   0x08000410   0x00000018   Code   RO         1258    .text.GPIO_SetBits  i2c_sw.o
+    0x08000428   0x08000428   0x00000020   Code   RO         1230    .text.Gpio_Exit_Flag_Set  gpio.o
+    0x08000448   0x08000448   0x00000086   Code   RO         1226    .text.Gpio_Exit_Init  gpio.o
+    0x080004ce   0x080004ce   0x00000002   PAD
+    0x080004d0   0x080004d0   0x00000104   Code   RO         1224    .text.Gpio_Init     gpio.o
+    0x080005d4   0x080005d4   0x00000004   Code   RO         1146    .text.HardFault_Handler  at32f415_int.o
+    0x080005d8   0x080005d8   0x00000040   Code   RO         1175    .text.Led_Dfh_Play_Step  led.o
+    0x08000618   0x08000618   0x000000b8   Code   RO         1177    .text.Led_Dfh_Set   led.o
+    0x080006d0   0x080006d0   0x00000010   Code   RO         1181    .text.Led_Flash     led.o
+    0x080006e0   0x080006e0   0x000000a4   Code   RO         1173    .text.Led_Fsm       led.o
+    0x08000784   0x08000784   0x00000004   Code   RO         1148    .text.MemManage_Handler  at32f415_int.o
+    0x08000788   0x08000788   0x00000002   Code   RO         1144    .text.NMI_Handler   at32f415_int.o
+    0x0800078a   0x0800078a   0x00000002   PAD
+    0x0800078c   0x0800078c   0x0000006c   Code   RO          643    .text.NVIC_EncodePriority  at32f415_misc.o
+    0x080007f8   0x080007f8   0x00000060   Code   RO         1212    .text.Paj7620u2_Get  paj7620u2.o
+    0x08000858   0x08000858   0x000000a0   Code   RO         1210    .text.Paj7620u2_Init  paj7620u2.o
+    0x080008f8   0x080008f8   0x00000002   Code   RO         1158    .text.PendSV_Handler  at32f415_int.o
+    0x080008fa   0x080008fa   0x00000002   PAD
+    0x080008fc   0x080008fc   0x000000c4   Code   RO         1246    .text.Pwm_Timer_Init  timer.o
+    0x080009c0   0x080009c0   0x00000002   Code   RO         1154    .text.SVC_Handler   at32f415_int.o
+    0x080009c2   0x080009c2   0x00000002   PAD
+    0x080009c4   0x080009c4   0x000000a2   Code   RO         1324    .text.SW_I2C_ReadControl_8Bit  i2c_sw.o
+    0x08000a66   0x08000a66   0x00000002   PAD
+    0x08000a68   0x08000a68   0x00000036   Code   RO         1294    .text.SW_I2C_ReadVal_SDA  i2c_sw.o
+    0x08000a9e   0x08000a9e   0x00000002   PAD
+    0x08000aa0   0x08000aa0   0x0000007a   Code   RO         1310    .text.SW_I2C_Read_Data  i2c_sw.o
+    0x08000b1a   0x08000b1a   0x00000002   PAD
+    0x08000b1c   0x08000b1c   0x000000a6   Code   RO         1312    .text.SW_I2C_WriteControl_8Bit  i2c_sw.o
+    0x08000bc2   0x08000bc2   0x00000002   PAD
+    0x08000bc4   0x08000bc4   0x00000052   Code   RO         1308    .text.SW_I2C_Write_Data  i2c_sw.o
+    0x08000c16   0x08000c16   0x00000002   PAD
+    0x08000c18   0x08000c18   0x00000056   Code   RO         1256    .text.SW_I2C_initial  i2c_sw.o
+    0x08000c6e   0x08000c6e   0x00000002   PAD
+    0x08000c70   0x08000c70   0x00000002   Code   RO         1160    .text.SysTick_Handler  at32f415_int.o
+    0x08000c72   0x08000c72   0x00000002   PAD
+    0x08000c74   0x08000c74   0x000000d0   Code   RO           11    .text.SystemInit    system_at32f415.o
+    0x08000d44   0x08000d44   0x00000052   Code   RO         1198    .text.System_Init   main.o
+    0x08000d96   0x08000d96   0x00000002   PAD
+    0x08000d98   0x08000d98   0x0000000c   Code   RO         1244    .text.System_Timer_Flag_Get  timer.o
+    0x08000da4   0x08000da4   0x00000018   Code   RO         1242    .text.System_Timer_Flag_Set  timer.o
+    0x08000dbc   0x08000dbc   0x00000050   Code   RO         1240    .text.System_Timer_Init  timer.o
+    0x08000e0c   0x08000e0c   0x0000001a   Code   RO         1272    .text.TIMER__Wait_us  i2c_sw.o
+    0x08000e26   0x08000e26   0x00000002   PAD
+    0x08000e28   0x08000e28   0x00000032   Code   RO         1162    .text.TMR1_OVF_TMR10_IRQHandler  at32f415_int.o
+    0x08000e5a   0x08000e5a   0x00000002   PAD
+    0x08000e5c   0x08000e5c   0x00000004   Code   RO         1152    .text.UsageFault_Handler  at32f415_int.o
+    0x08000e60   0x08000e60   0x00000030   Code   RO          649    .text.__NVIC_EnableIRQ  at32f415_misc.o
+    0x08000e90   0x08000e90   0x00000010   Code   RO          645    .text.__NVIC_GetPriorityGrouping  at32f415_misc.o
+    0x08000ea0   0x08000ea0   0x00000042   Code   RO          647    .text.__NVIC_SetPriority  at32f415_misc.o
+    0x08000ee2   0x08000ee2   0x00000002   PAD
+    0x08000ee4   0x08000ee4   0x0000003c   Code   RO          657    .text.__NVIC_SetPriorityGrouping  at32f415_misc.o
+    0x08000f20   0x08000f20   0x00000026   Code   RO          226    .text.crm_ahb_div_set  at32f415_crm.o
+    0x08000f46   0x08000f46   0x00000002   PAD
+    0x08000f48   0x08000f48   0x00000026   Code   RO          228    .text.crm_apb1_div_set  at32f415_crm.o
+    0x08000f6e   0x08000f6e   0x00000002   PAD
+    0x08000f70   0x08000f70   0x00000026   Code   RO          230    .text.crm_apb2_div_set  at32f415_crm.o
+    0x08000f96   0x08000f96   0x00000002   PAD
+    0x08000f98   0x08000f98   0x00000038   Code   RO          254    .text.crm_auto_step_mode_enable  at32f415_crm.o
+    0x08000fd0   0x08000fd0   0x000000a6   Code   RO          218    .text.crm_clock_source_enable  at32f415_crm.o
+    0x08001076   0x08001076   0x00000002   PAD
+    0x08001078   0x08001078   0x0000003e   Code   RO          204    .text.crm_flag_get  at32f415_crm.o
+    0x080010b6   0x080010b6   0x00000002   PAD
+    0x080010b8   0x080010b8   0x00000052   Code   RO          212    .text.crm_periph_clock_enable  at32f415_crm.o
+    0x0800110a   0x0800110a   0x00000002   PAD
+    0x0800110c   0x0800110c   0x000001e4   Code   RO          240    .text.crm_pll_config  at32f415_crm.o
+    0x080012f0   0x080012f0   0x0000009a   Code   RO          198    .text.crm_reset     at32f415_crm.o
+    0x0800138a   0x0800138a   0x00000002   PAD
+    0x0800138c   0x0800138c   0x0000001e   Code   RO          244    .text.crm_sysclk_switch  at32f415_crm.o
+    0x080013aa   0x080013aa   0x00000002   PAD
+    0x080013ac   0x080013ac   0x00000010   Code   RO          246    .text.crm_sysclk_switch_status_get  at32f415_crm.o
+    0x080013bc   0x080013bc   0x0000001c   Code   RO          434    .text.exint_default_para_init  at32f415_exint.o
+    0x080013d8   0x080013d8   0x00000014   Code   RO          438    .text.exint_flag_clear  at32f415_exint.o
+    0x080013ec   0x080013ec   0x0000003a   Code   RO          440    .text.exint_flag_get  at32f415_exint.o
+    0x08001426   0x08001426   0x00000002   PAD
+    0x08001428   0x08001428   0x000000e4   Code   RO          436    .text.exint_init    at32f415_exint.o
+    0x0800150c   0x0800150c   0x00000042   Code   RO         1200    .text.gesture       main.o
+    0x0800154e   0x0800154e   0x00000002   PAD
+    0x08001550   0x08001550   0x00000014   Code   RO          547    .text.gpio_bits_reset  at32f415_gpio.o
+    0x08001564   0x08001564   0x00000014   Code   RO          545    .text.gpio_bits_set  at32f415_gpio.o
+    0x08001578   0x08001578   0x00000026   Code   RO          535    .text.gpio_default_para_init  at32f415_gpio.o
+    0x0800159e   0x0800159e   0x00000002   PAD
+    0x080015a0   0x080015a0   0x000000dc   Code   RO          561    .text.gpio_exint_line_config  at32f415_gpio.o
+    0x0800167c   0x0800167c   0x00000140   Code   RO          533    .text.gpio_init     at32f415_gpio.o
+    0x080017bc   0x080017bc   0x00000036   Code   RO          537    .text.gpio_input_data_bit_read  at32f415_gpio.o
+    0x080017f2   0x080017f2   0x00000002   PAD
+    0x080017f4   0x080017f4   0x00000096   Code   RO          559    .text.gpio_pin_remap_config  at32f415_gpio.o
+    0x0800188a   0x0800188a   0x00000002   PAD
+    0x0800188c   0x0800188c   0x00000078   Code   RO         1292    .text.i2c_check_ack  i2c_sw.o
+    0x08001904   0x08001904   0x0000002a   Code   RO         1296    .text.i2c_check_not_ack  i2c_sw.o
+    0x0800192e   0x0800192e   0x00000002   PAD
+    0x08001930   0x08001930   0x00000022   Code   RO         1284    .text.i2c_clk_data_out  i2c_sw.o
+    0x08001952   0x08001952   0x00000002   PAD
+    0x08001954   0x08001954   0x0000001c   Code   RO         1286    .text.i2c_port_initial  i2c_sw.o
+    0x08001970   0x08001970   0x00000052   Code   RO         1302    .text.i2c_register_address  i2c_sw.o
+    0x080019c2   0x080019c2   0x00000002   PAD
+    0x080019c4   0x080019c4   0x0000007a   Code   RO         1300    .text.i2c_slave_address  i2c_sw.o
+    0x08001a3e   0x08001a3e   0x00000002   PAD
+    0x08001a40   0x08001a40   0x00000040   Code   RO         1288    .text.i2c_start_condition  i2c_sw.o
+    0x08001a80   0x08001a80   0x00000032   Code   RO         1290    .text.i2c_stop_condition  i2c_sw.o
+    0x08001ab2   0x08001ab2   0x00000002   PAD
+    0x08001ab4   0x08001ab4   0x0000002a   Code   RO         1196    .text.main          main.o
+    0x08001ade   0x08001ade   0x00000002   PAD
+    0x08001ae0   0x08001ae0   0x00000034   Code   RO          641    .text.nvic_irq_enable  at32f415_misc.o
+    0x08001b14   0x08001b14   0x00000014   Code   RO          655    .text.nvic_priority_group_config  at32f415_misc.o
+    0x08001b28   0x08001b28   0x00000026   Code   RO         1278    .text.scl_high      i2c_sw.o
+    0x08001b4e   0x08001b4e   0x00000002   PAD
+    0x08001b50   0x08001b50   0x00000026   Code   RO         1280    .text.scl_low       i2c_sw.o
+    0x08001b76   0x08001b76   0x00000002   PAD
+    0x08001b78   0x08001b78   0x00000026   Code   RO         1274    .text.sda_high      i2c_sw.o
+    0x08001b9e   0x08001b9e   0x00000002   PAD
+    0x08001ba0   0x08001ba0   0x00000036   Code   RO         1264    .text.sda_in_mode   i2c_sw.o
+    0x08001bd6   0x08001bd6   0x00000002   PAD
+    0x08001bd8   0x08001bd8   0x00000026   Code   RO         1276    .text.sda_low       i2c_sw.o
+    0x08001bfe   0x08001bfe   0x00000002   PAD
+    0x08001c00   0x08001c00   0x0000002c   Code   RO         1282    .text.sda_out       i2c_sw.o
+    0x08001c2c   0x08001c2c   0x00000046   Code   RO         1266    .text.sda_out_mode  i2c_sw.o
+    0x08001c72   0x08001c72   0x00000002   PAD
+    0x08001c74   0x08001c74   0x0000008a   Code   RO         1136    .text.system_clock_config  at32f415_clock.o
+    0x08001cfe   0x08001cfe   0x00000002   PAD
+    0x08001d00   0x08001d00   0x00000232   Code   RO           13    .text.system_core_clock_update  system_at32f415.o
+    0x08001f32   0x08001f32   0x00000002   PAD
+    0x08001f34   0x08001f34   0x00000022   Code   RO          827    .text.tmr_base_init  at32f415_tmr.o
+    0x08001f56   0x08001f56   0x00000002   PAD
+    0x08001f58   0x08001f58   0x00000052   Code   RO          851    .text.tmr_channel_value_set  at32f415_tmr.o
+    0x08001faa   0x08001faa   0x00000002   PAD
+    0x08001fac   0x08001fac   0x00000022   Code   RO          831    .text.tmr_cnt_dir_set  at32f415_tmr.o
+    0x08001fce   0x08001fce   0x00000002   PAD
+    0x08001fd0   0x08001fd0   0x0000001a   Code   RO          819    .text.tmr_counter_enable  at32f415_tmr.o
+    0x08001fea   0x08001fea   0x00000002   PAD
+    0x08001fec   0x08001fec   0x00000012   Code   RO          905    .text.tmr_flag_clear  at32f415_tmr.o
+    0x08001ffe   0x08001ffe   0x00000002   PAD
+    0x08002000   0x08002000   0x00000030   Code   RO          903    .text.tmr_flag_get  at32f415_tmr.o
+    0x08002030   0x08002030   0x0000003a   Code   RO          901    .text.tmr_interrupt_enable  at32f415_tmr.o
+    0x0800206a   0x0800206a   0x00000002   PAD
+    0x0800206c   0x0800206c   0x000001ec   Code   RO          843    .text.tmr_output_channel_config  at32f415_tmr.o
+    0x08002258   0x08002258   0x00000026   Code   RO          821    .text.tmr_output_default_para_init  at32f415_tmr.o
+    0x0800227e   0x0800227e   0x00000002   PAD
+    0x08002280   0x08002280   0x00000022   Code   RO          909    .text.tmr_output_enable  at32f415_tmr.o
+    0x080022a2   0x080022a2   0x0000003c   Data   RO         1216    .rodata.Init_Gesture_Array  paj7620u2.o
+    0x080022de   0x080022de   0x00000066   Data   RO         1214    .rodata.Init_Register_Array  paj7620u2.o
+    0x08002344   0x08002344   0x00000010   Data   RO           16    .rodata.system_core_clock_update.sys_ahb_div_table  system_at32f415.o
+    0x08002354   0x08002354   0x00000020   Data   RO         1636    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000fd8, Size: 0x00000680, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002378, Size: 0x000006a0, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08000fd8   0x00000004   Data   RW           15    .data.system_core_clock  system_at32f415.o
-    0x20000004   0x08000fdc   0x00000004   PAD
-    0x20000008        -       0x00000060   Zero   RW         1464    .bss                c_w.l(libspace.o)
-    0x20000068        -       0x00000010   Zero   RW         1193    .bss.Gpio_Exit_Flag  gpio.o
-    0x20000078        -       0x00000001   Zero   RW         1209    .bss.system_timer_flag  timer.o
-    0x20000079   0x08000fdc   0x00000007   PAD
-    0x20000080        -       0x00000200   Zero   RW            2    HEAP                startup_at32f415.o
-    0x20000280        -       0x00000400   Zero   RW            1    STACK               startup_at32f415.o
+    0x20000000   0x08002378   0x00000020   Data   RW         1183    .data.dfh_music     led.o
+    0x20000020   0x08002398   0x00000004   Data   RW           15    .data.system_core_clock  system_at32f415.o
+    0x20000024   0x0800239c   0x00000004   PAD
+    0x20000028        -       0x00000060   Zero   RW         1503    .bss                c_w.l(libspace.o)
+    0x20000088        -       0x00000010   Zero   RW         1232    .bss.Gpio_Exit_Flag  gpio.o
+    0x20000098        -       0x00000001   Zero   RW         1187    .bss.Led_Dfh_Play_Step.step  led.o
+    0x20000099   0x0800239c   0x00000001   PAD
+    0x2000009a        -       0x00000002   Zero   RW         1185    .bss.Led_Fsm.ms100  led.o
+    0x2000009c        -       0x00000002   Zero   RW         1186    .bss.Led_Fsm.ms300  led.o
+    0x2000009e        -       0x00000001   Zero   RW         1184    .bss.flash_time     led.o
+    0x2000009f        -       0x00000001   Zero   RW         1248    .bss.system_timer_flag  timer.o
+    0x200000a0        -       0x00000200   Zero   RW            2    HEAP                startup_at32f415.o
+    0x200002a0        -       0x00000400   Zero   RW            1    STACK               startup_at32f415.o
 
 
 ==============================================================================
@@ -2939,22 +3151,24 @@ Image component sizes
 
        138          0          0          0          0       6361   at32f415_clock.o
       1164          6          0          0          0      19161   at32f415_crm.o
-        78          0          0          0          0       3126   at32f415_exint.o
-       358          0          0          0          0      12778   at32f415_gpio.o
+       334          0          0          0          0       3126   at32f415_exint.o
+       822          4          0          0          0      12778   at32f415_gpio.o
        106          0          0          0          0       6012   at32f415_int.o
-        80          0          0          0          0       6083   at32f415_misc.o
-        66          0          0          0          0      23112   at32f415_tmr.o
-        56          0          0          0         16       8857   gpio.o
-        86          0          0          0          0      14114   i2c_sw.o
-        70          0          0          0          0        790   main.o
+       370          0          0          0          0       6083   at32f415_misc.o
+       864         16          0          0          0      23112   at32f415_tmr.o
+       426          0          0          0         16       8860   gpio.o
+      1632          0          0          0          0      14114   i2c_sw.o
+       428          0          0         32          6       9581   led.o
+       190          8          0          0          0       9079   main.o
+       256          8        162          0          0       1131   paj7620u2.o
         64         26        368          0       1536        820   startup_at32f415.o
        770          0         16          4          0       7898   system_at32f415.o
-        36          0          0          0          1      13057   timer.o
+       312          0          0          0          1      13057   timer.o
 
     ----------------------------------------------------------------------
-      3116         32        416          4       1564     122169   Object Totals
+      7978         68        578         36       1564     141173   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        44          0          0          0         11          0   (incl. Padding)
+       102          0          0          0          5          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -3002,15 +3216,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3636         48        416          4       1660     122473   Grand Totals
-      3636         48        416          4       1660     122473   ELF Image Totals
-      3636         48        416          4          0          0   ROM Totals
+      8498         84        578         36       1660     141437   Grand Totals
+      8498         84        578         36       1660     141437   ELF Image Totals
+      8498         84        578         36          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 4052 (   3.96kB)
-    Total RW  Size (RW Data + ZI Data)              1664 (   1.63kB)
-    Total ROM Size (Code + RO Data + RW Data)       4056 (   3.96kB)
+    Total RO  Size (Code + RO Data)                 9076 (   8.86kB)
+    Total RW  Size (RW Data + ZI Data)              1696 (   1.66kB)
+    Total ROM Size (Code + RO Data + RW Data)       9112 (   8.90kB)
 
 ==============================================================================
 

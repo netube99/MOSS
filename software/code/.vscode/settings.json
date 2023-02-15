@@ -28,6 +28,11 @@
         "eeprom.h": "c",
         "flash.h": "c",
         "led.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "i2c_sw.h": "c",
+        "paj7620u2.h": "c",
+        "stdio.h": "c",
+        "time.h": "c",
+        "paj7620u2_cmd.h": "c"
     }
 }

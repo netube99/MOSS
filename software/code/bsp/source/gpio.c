@@ -6,8 +6,10 @@ void Gpio_Init(void)
 {
     //初始化结构体与外设时钟管理
     gpio_init_type gpio_init_struct;
+    crm_periph_clock_enable(CRM_IOMUX_PERIPH_CLOCK, TRUE);
     crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);
     crm_periph_clock_enable(CRM_GPIOB_PERIPH_CLOCK, TRUE);
+    gpio_pin_remap_config(SWJTAG_GMUX_010, TRUE);
 
     //电平状态初始化
     _GPIO_LED_STD_1_H();
@@ -56,7 +58,7 @@ void Gpio_Exit_Init(void)
     exint_init_struct.line_select = EXINT_LINE_5;
     exint_init_struct.line_polarity = EXINT_TRIGGER_FALLING_EDGE;
     exint_init(&exint_init_struct);
-    nvic_irq_enable(EXINT0_IRQn, 1, 0);
+    nvic_irq_enable(EXINT9_5_IRQn, 1, 0);
 }
 
 uint8_t Gpio_Exit_Flag_Get(uint8_t exit_line)

@@ -1,7 +1,6 @@
 #ifndef _SYSTEM_TIMER_H_
 #define _SYSTEM_TIMER_H_
 
-#include <stdint.h>
 #include "at32f415.h"
 
 //MOSS红眼

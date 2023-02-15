@@ -39,14 +39,14 @@ void Pwm_Timer_Init(void)
     gpio_init(GPIO_LED_MOSS_PORT, &gpio_init_struct);
 
     //TIMER 3
-    crm_periph_clock_enable(CRM_TMR1_PERIPH_CLOCK, TRUE);
+    crm_periph_clock_enable(CRM_TMR3_PERIPH_CLOCK, TRUE);
     tmr_base_init(PWM_LED_MOSS_TIMER, 100-1, 144-1);
     tmr_cnt_dir_set(PWM_LED_MOSS_TIMER, TMR_COUNT_UP);
     tmr_output_config_type tmr_output_struct;
     tmr_output_default_para_init(&tmr_output_struct);
     tmr_output_struct.oc_mode = TMR_OUTPUT_CONTROL_PWM_MODE_B;  //输出模式B
     tmr_output_struct.oc_output_state = TRUE;                   //使能通道输出
-    tmr_output_struct.oc_polarity = TMR_OUTPUT_ACTIVE_LOW;      //输出极性低
+    tmr_output_struct.oc_polarity = TMR_OUTPUT_ACTIVE_HIGH;      //输出极性低
     tmr_output_struct.oc_idle_state = TRUE;                     //空闲模式状态为高电平
     tmr_output_channel_config(PWM_LED_MOSS_TIMER, PWM_LED_MOSS_CHANNEL, &tmr_output_struct);
     tmr_channel_value_set(PWM_LED_MOSS_TIMER, PWM_LED_MOSS_CHANNEL, 0);
