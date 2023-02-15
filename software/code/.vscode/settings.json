@@ -33,6 +33,12 @@
         "paj7620u2.h": "c",
         "stdio.h": "c",
         "time.h": "c",
-        "paj7620u2_cmd.h": "c"
+        "paj7620u2_cmd.h": "c",
+        "usb_kb.h": "c",
+        "usb_core.h": "c",
+        "usb_conf.h": "c",
+        "keyboard_class.h": "c",
+        "keyboard_desc.h": "c",
+        "delay.h": "c"
     }
 }

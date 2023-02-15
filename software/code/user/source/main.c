@@ -24,9 +24,10 @@ void System_Init(void)
     System_Timer_Init();                                    //系统定时器初始化
     Pwm_Timer_Init();                                       //PWM定时器初始化
     _SET_PWM_LED_MOSS(100);                                 //点亮MOSS红眼
-    Gpio_Exit_Init();                                       //外部中断促使华
+    // Gpio_Exit_Init();                                       //外部中断促使华
     SW_I2C_initial();                                       //软件I2C初始化
     Paj7620u2_Init();                                       //手势传感器上电初始化
+    Usb_Init();                                             //初始化USB
     _GPIO_LED_STD_1_L();                                    //开启白灯表示初始化完成
     _GPIO_LED_STD_2_L();
 }
@@ -41,10 +42,10 @@ void gesture(void)
         Led_Flash();
         switch(state)
         {
-            case PAJ_UP : break;
-            case PAJ_DOWN : break;
-            case PAJ_LEFT : break;
-            case PAJ_RIGHT : break;
+            case PAJ_UP :    Usb_Send_Hotkey(0x30, 0x26); break; // right_shift + right_ctrl + 9
+            case PAJ_DOWN :  Usb_Send_Hotkey(0x30, 0x25); break; // right_shift + right_ctrl + 8
+            case PAJ_LEFT :  Usb_Send_Hotkey(0x30, 0x24); break; // right_shift + right_ctrl + 7
+            case PAJ_RIGHT : Usb_Send_Hotkey(0x30, 0x23); break; // right_shift + right_ctrl + 6
         }
     }
 }

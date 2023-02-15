@@ -42,31 +42,31 @@ void Gpio_Init(void)
     gpio_init(GPIO_LED_DFH_4_PORT, &gpio_init_struct);
 }
 
-void Gpio_Exit_Init(void)
-{
-    for(uint8_t i=0; i<16; i++)
-        Gpio_Exit_Flag[i] = 0 ;
+// void Gpio_Exit_Init(void)
+// {
+//     for(uint8_t i=0; i<16; i++)
+//         Gpio_Exit_Flag[i] = 0 ;
 
-    exint_init_type exint_init_struct;
-    crm_periph_clock_enable(CRM_IOMUX_PERIPH_CLOCK, TRUE);
-    crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);
-    gpio_exint_line_config(GPIO_EXIT_SOURCE_PORT, GPIO_EXIT_SOURCE_PIN);
+//     exint_init_type exint_init_struct;
+//     crm_periph_clock_enable(CRM_IOMUX_PERIPH_CLOCK, TRUE);
+//     crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);
+//     gpio_exint_line_config(GPIO_EXIT_SOURCE_PORT, GPIO_EXIT_SOURCE_PIN);
 
-    exint_default_para_init(&exint_init_struct);
-    exint_init_struct.line_enable = TRUE;
-    exint_init_struct.line_mode = EXINT_LINE_INTERRUPUT;
-    exint_init_struct.line_select = EXINT_LINE_5;
-    exint_init_struct.line_polarity = EXINT_TRIGGER_FALLING_EDGE;
-    exint_init(&exint_init_struct);
-    nvic_irq_enable(EXINT9_5_IRQn, 1, 0);
-}
+//     exint_default_para_init(&exint_init_struct);
+//     exint_init_struct.line_enable = TRUE;
+//     exint_init_struct.line_mode = EXINT_LINE_INTERRUPUT;
+//     exint_init_struct.line_select = EXINT_LINE_5;
+//     exint_init_struct.line_polarity = EXINT_TRIGGER_FALLING_EDGE;
+//     exint_init(&exint_init_struct);
+//     nvic_irq_enable(EXINT9_5_IRQn, 1, 0);
+// }
 
-uint8_t Gpio_Exit_Flag_Get(uint8_t exit_line)
-{
-    return Gpio_Exit_Flag[exit_line];
-}
+// uint8_t Gpio_Exit_Flag_Get(uint8_t exit_line)
+// {
+//     return Gpio_Exit_Flag[exit_line];
+// }
 
-void Gpio_Exit_Flag_Set(uint8_t exit_line, uint8_t state)
-{
-    Gpio_Exit_Flag[exit_line] = state ;
-}
+// void Gpio_Exit_Flag_Set(uint8_t exit_line, uint8_t state)
+// {
+//     Gpio_Exit_Flag[exit_line] = state ;
+// }

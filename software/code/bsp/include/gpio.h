@@ -45,8 +45,8 @@
 #define GPIO_EXIT_SOURCE_PORT       GPIO_PORT_SOURCE_GPIOA
 
 void Gpio_Init(void);
-void Gpio_Exit_Init(void);
-uint8_t Gpio_Exit_Flag_Get(uint8_t exit_line);
-void Gpio_Exit_Flag_Set(uint8_t exit_line, uint8_t state);
+// void Gpio_Exit_Init(void);
+// uint8_t Gpio_Exit_Flag_Get(uint8_t exit_line);
+// void Gpio_Exit_Flag_Set(uint8_t exit_line, uint8_t state);
 
 #endif

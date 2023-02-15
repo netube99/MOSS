@@ -19,10 +19,10 @@ uint8_t Paj7620u2_Get(void)
     data = SW_I2C_ReadControl_8Bit(SW_I2C1, PAJ7620U2_I2C_ADDRESS, PAJ_INT_FLAG1);
     switch(data)
     {
-        case 0x01: out = PAJ_LEFT;  break;
-        case 0x02: out = PAJ_RIGHT; break;
-        case 0x04: out = PAJ_UP;    break;
-        case 0x08: out = PAJ_DOWN;  break;
+        case 0x01: out = PAJ_DOWN;  break;
+        case 0x02: out = PAJ_UP;    break;
+        case 0x04: out = PAJ_RIGHT; break;
+        case 0x08: out = PAJ_LEFT;  break;
     }
     return out ;
 }

@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>AT32F415KBU7_4,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\code\device\cmsis\inc;..\code\device\drivers\inc;..\code\bsp\include;..\code\lib\include;..\code\user\include</IncludePath>
+              <IncludePath>..\code\device\cmsis\inc;..\code\device\drivers\inc;..\code\bsp\include;..\code\lib\include;..\code\user\include;..\code\device\usb_drivers\inc;..\code\device\usbd_class\keyboard</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -528,6 +528,16 @@
               <FileType>1</FileType>
               <FilePath>..\code\user\source\PAJ7620U2.c</FilePath>
             </File>
+            <File>
+              <FileName>usb_kb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\user\source\usb_kb.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\user\source\delay.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -562,6 +572,41 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\code\lib\source\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usb</GroupName>
+          <Files>
+            <File>
+              <FileName>usb_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\device\usb_drivers\src\usb_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\device\usb_drivers\src\usbd_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_int.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\device\usb_drivers\src\usbd_int.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_sdr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\device\usb_drivers\src\usbd_sdr.c</FilePath>
+            </File>
+            <File>
+              <FileName>keyboard_class.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\device\usbd_class\keyboard\keyboard_class.c</FilePath>
+            </File>
+            <File>
+              <FileName>keyboard_desc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\device\usbd_class\keyboard\keyboard_desc.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -47,6 +47,7 @@ void system_clock_config(void)
   /* config flash psr register */
   flash_psr_set(FLASH_WAIT_CYCLE_4);
 
+
   /* reset crm */
   crm_reset();
 
@@ -91,6 +92,10 @@ void system_clock_config(void)
 
   /* disable auto step mode */
   crm_auto_step_mode_enable(FALSE);
+
+  /* config usbclk from pll */
+  crm_usb_clock_div_set(CRM_USB_DIV_3);
+  crm_usb_clock_source_select(CRM_USB_CLOCK_SOURCE_PLL);
 
   /* update system_core_clock global variable */
   system_core_clock_update();

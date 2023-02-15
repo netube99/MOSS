@@ -4,6 +4,7 @@
 //system
 #include "at32f415.h"
 #include "at32f415_clock.h"
+#include "delay.h"
 
 //bsp
 #include "gpio.h"
@@ -12,6 +13,7 @@
 
 //hardware
 #include "led.h"
+#include "usb_kb.h"
 #include "PAJ7620U2.h"
 
 //application
