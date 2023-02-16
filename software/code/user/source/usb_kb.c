@@ -54,7 +54,6 @@ void Clean_Key_Buffer(void)
 
 void usb_delay_ms(uint32_t ms)
 {
-  /* user can define self delay function */
     delay_ms(ms);
 }
 
